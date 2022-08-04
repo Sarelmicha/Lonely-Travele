@@ -1,51 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetIndicator : MonoBehaviour
+namespace HappyFlow.LonelyTraveler.Player
 {
-    [SerializeField] private CircleCollider2D m_Base;
-    private float m;
-    private Collider2D m_Collider;
-    private bool m_IsDragging;
-    private Vector2 m_MousePosition;
-
-    private void Awake()
+    public class TargetIndicator : MonoBehaviour
     {
-        m_Collider = GetComponent<Collider2D>();
-    }
+        [SerializeField] private CircleCollider2D m_Base;
+        private bool m_IsDragging;
+        private Vector2 m_MousePosition;
 
-    private void Update()
-    {
-        if (m_IsDragging)
+        /// <summary>
+        /// Invoke when the player relase the target on a certin location. 
+        /// </summary>
+        public event Action<Vector3> OnTargetReleased;
+
+        private void Update()
         {
-            Debug.Log("im here");
-            m_MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (m_IsDragging)
+            {
+                UpdatePosition();
+            }
+        }
 
-            Debug.Log($"m_MousePosition {m_MousePosition}");
-            Debug.Log($"transform.position {transform.position}");
-            Debug.Log($"m_Base.radius {m_Base.radius}");
+        private void UpdatePosition()
+        {
+            m_MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             if (Vector2.Distance(m_MousePosition, m_Base.transform.position) <= m_Base.radius)
             {
-                transform.position = m_MousePosition;
+                SetPosition(m_MousePosition);
             }
-            else 
+            else
             {
-                transform.position = Vector3.Normalize(m_MousePosition) * m_Base.radius;
+                SetPosition(Vector3.Normalize(m_MousePosition) * m_Base.radius);
             }
         }
-    }
 
+        private void OnMouseDown()
+        {
+            m_IsDragging = true;
+        }
 
-    private void OnMouseDown()
-    {
-        m_IsDragging = true;
-    }
+        private void OnMouseUp()
+        {
+            m_IsDragging = false;
+            OnTargetReleased?.Invoke(-(Vector3.Normalize(transform.position) * Vector2.Distance(transform.position, m_Base.transform.position)));
+            SetPosition(m_Base.transform.position);
+        }
 
-    private void OnMouseUp()
-    {
-        m_IsDragging = false;
-        transform.position = m_Base.transform.position;
+        private void SetPosition(Vector3 position)
+        {
+            transform.position = position;
+        }
     }
 }
