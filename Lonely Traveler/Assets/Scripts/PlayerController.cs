@@ -16,6 +16,7 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
         }
+
         private void Start()
         {
             SubsribeEvents();
@@ -28,17 +29,17 @@ namespace HappyFlow.LonelyTraveler.Player
 
         private void SubsribeEvents()
         {
-            m_TargetIndicator.OnTargetReleased += Shoot;
+            m_TargetIndicator.TargetIndicatorLogic.OnTargetReleased += Jump;
         }
 
         private void UnsubscribeEvents()
         {
-            m_TargetIndicator.OnTargetReleased -= Shoot;
+            m_TargetIndicator.TargetIndicatorLogic.OnTargetReleased -= Jump;
         }
 
-        private void Shoot(Vector3 vector)
+        private void Jump(Vector3 vector)
         {
-            Debug.Log("shoot!" + vector);
+            Debug.Log("Jump!" + vector);
             m_Rigidbody.AddForce(vector * m_Thrust);
         }
     }
