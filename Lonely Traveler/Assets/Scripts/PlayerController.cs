@@ -7,40 +7,26 @@ namespace HappyFlow.LonelyTraveler.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private Rigidbody2D m_Rigidbody;
         [SerializeField] private TargetIndicator m_TargetIndicator;
         [SerializeField] private float m_Thrust;
 
-        private Rigidbody2D m_Rigidbody;
+        private PlayerControllerLogic m_PlayerControllerLogic;
 
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
+            m_PlayerControllerLogic = new PlayerControllerLogic(m_TargetIndicator.TargetIndicatorLogic, m_Rigidbody, m_Thrust);
         }
 
         private void Start()
         {
-            SubsribeEvents();
+            m_PlayerControllerLogic.SubsribeEvents();
         }
 
         private void OnDestroy()
         {
-            UnsubscribeEvents();
-        }
-
-        private void SubsribeEvents()
-        {
-            m_TargetIndicator.TargetIndicatorLogic.OnTargetReleased += Jump;
-        }
-
-        private void UnsubscribeEvents()
-        {
-            m_TargetIndicator.TargetIndicatorLogic.OnTargetReleased -= Jump;
-        }
-
-        private void Jump(Vector3 vector)
-        {
-            Debug.Log("Jump!" + vector);
-            m_Rigidbody.AddForce(vector * m_Thrust);
+            m_PlayerControllerLogic.UnsubscribeEvents();
         }
     }
 }
