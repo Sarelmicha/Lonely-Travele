@@ -15,7 +15,7 @@ namespace HappyFlow.LonelyTraveler.Player
 
         private void Awake()
         {
-            TargetIndicatorLogic = new TargetIndicatorLogic(transform, m_Base);
+            TargetIndicatorLogic = new TargetIndicatorLogic(transform, m_Base.transform, m_Base.radius);
         }
 
         private void Update()

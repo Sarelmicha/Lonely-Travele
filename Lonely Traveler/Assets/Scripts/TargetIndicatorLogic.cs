@@ -6,19 +6,21 @@ using UnityEngine;
 public class TargetIndicatorLogic 
 {
     private Transform m_TargetTransform;
-    private CircleCollider2D m_BaseCollider;
+    private Transform m_BaseTransform;
     private Vector2 m_MousePosition;
     private bool m_IsDragging;
+    private float m_Radius;
 
     /// <summary>
     /// Invoke when the player relase the target on a certin location. 
     /// </summary>
     public event Action<Vector3> OnTargetReleased;
 
-    public TargetIndicatorLogic(Transform targetTransform, CircleCollider2D baseCollider)
+    public TargetIndicatorLogic(Transform targetTransform, Transform baseTransform, float radius)
     {
         m_TargetTransform = targetTransform;
-        m_BaseCollider = baseCollider;
+        m_BaseTransform = baseTransform;
+        m_Radius = radius;
     }
 
     public void TryUpdatePosition()
@@ -33,13 +35,13 @@ public class TargetIndicatorLogic
     {
         m_MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Vector2.Distance(m_MousePosition, m_BaseCollider.transform.position) <= m_BaseCollider.radius)
+        if (Vector2.Distance(m_MousePosition, m_BaseTransform.position) <= m_Radius)
         {
             SetPosition(m_MousePosition);
         }
         else
         {
-            SetPosition(Vector3.Normalize(m_MousePosition) * m_BaseCollider.radius);
+            SetPosition(Vector3.Normalize(m_MousePosition) * m_Radius);
         }
     }
     private void SetPosition(Vector3 position)
@@ -50,8 +52,8 @@ public class TargetIndicatorLogic
     public void OnMouseUp()
     {
         m_IsDragging = false;
-        OnTargetReleased?.Invoke(-(Vector3.Normalize(m_TargetTransform.position) * Vector2.Distance(m_TargetTransform.position, m_BaseCollider.transform.position)));
-        SetPosition(m_BaseCollider.transform.position);
+        OnTargetReleased?.Invoke(-(Vector3.Normalize(m_TargetTransform.position) * Vector2.Distance(m_TargetTransform.position, m_BaseTransform.position)));
+        SetPosition(m_BaseTransform.position);
     }
 
     public void OnMouseDown()
