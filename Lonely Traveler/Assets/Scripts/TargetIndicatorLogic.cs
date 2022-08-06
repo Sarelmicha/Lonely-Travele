@@ -7,7 +7,7 @@ public class TargetIndicatorLogic
 {
     private Transform m_TargetTransform;
     private Transform m_BaseTransform;
-    private Vector2 m_MousePosition;
+    private Vector3 m_MousePosition;
     private bool m_IsDragging;
     private float m_Radius;
 
@@ -35,13 +35,17 @@ public class TargetIndicatorLogic
     {
         m_MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+       // Debug.Log(Vector3.Normalize(m_MousePosition));
+       // Debug.Log(Vector3.Normalize(m_BaseTransform.position));
+
         if (Vector2.Distance(m_MousePosition, m_BaseTransform.position) <= m_Radius)
         {
             SetPosition(m_MousePosition);
         }
         else
         {
-            SetPosition(Vector3.Normalize(m_MousePosition) * m_Radius);
+            var direction = m_MousePosition - m_BaseTransform.position;
+            SetPosition(m_BaseTransform.position + (Vector3.Normalize(direction) * m_Radius));
         }
     }
     private void SetPosition(Vector3 position)
@@ -50,9 +54,9 @@ public class TargetIndicatorLogic
     }
 
     public void OnMouseUp()
-    {
+    {       
         m_IsDragging = false;
-        OnTargetReleased?.Invoke(-(Vector3.Normalize(m_TargetTransform.position) * Vector2.Distance(m_TargetTransform.position, m_BaseTransform.position)));
+        OnTargetReleased?.Invoke(m_BaseTransform.position - m_TargetTransform.position);
         SetPosition(m_BaseTransform.position);
     }
 
