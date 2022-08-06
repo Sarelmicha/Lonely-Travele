@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 1731339933}
   - component: {fileID: 1731339931}
   m_Layer: 7
-  m_Name: Target Indicator
+  m_Name: Slingshot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958d2ede50befac40880a58882b8de24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Base: {fileID: 1994410736}
+  SlingshotHolder: {fileID: 1994410736}
   m_Image: {fileID: 1731339934}
 --- !u!58 &1731339933
 CircleCollider2D:
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731339929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 1994410736}
   - component: {fileID: 1994410739}
   m_Layer: 7
-  m_Name: Target Indicator Base
+  m_Name: Slignshot Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,9 +1198,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8464966, y: 0}
+  m_Offset: {x: 0.84649754, y: -0.4565004}
   serializedVersion: 2
-  m_Radius: 40.846497
+  m_Radius: 45.25943
 --- !u!114 &1994410737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,8 +1447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Rigidbody: {fileID: 2067531332}
-  m_TargetIndicator: {fileID: 1731339931}
-  m_Thrust: 2000
+  m_Slingshot: {fileID: 1731339931}
+  m_Thrust: 1000
 --- !u!50 &2067531332
 Rigidbody2D:
   serializedVersion: 4
