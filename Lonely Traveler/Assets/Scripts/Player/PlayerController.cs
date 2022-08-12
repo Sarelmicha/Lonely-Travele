@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 
 namespace HappyFlow.LonelyTraveler.Player
@@ -13,11 +15,12 @@ namespace HappyFlow.LonelyTraveler.Player
         [SerializeField] private float m_Thrust;
 
         private PlayerControllerLogic m_PlayerControllerLogic;
+        private Vector3 m_InitialPosition;
 
         private void Awake()
         {
-            m_Rigidbody = GetComponent<Rigidbody2D>();
             m_PlayerControllerLogic = new PlayerControllerLogic(m_Slingshot.SlingshotLogic, m_Rigidbody, m_Thrust);
+            m_InitialPosition = transform.position;
         }
 
         private void Start()
@@ -28,6 +31,12 @@ namespace HappyFlow.LonelyTraveler.Player
         private void OnDestroy()
         {
             m_PlayerControllerLogic.UnsubscribeEvents();
+        }
+
+        public void Reset()
+        {
+            transform.position = m_InitialPosition;
+            m_Rigidbody.velocity = Vector2.zero;
         }
     }
 }
