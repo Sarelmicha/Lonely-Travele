@@ -15,28 +15,32 @@ namespace HappyFlow.LonelyTraveler.Player
         [SerializeField] private float m_Thrust;
 
         private PlayerControllerLogic m_PlayerControllerLogic;
-        private Vector3 m_InitialPosition;
 
         private void Awake()
         {
-            m_PlayerControllerLogic = new PlayerControllerLogic(m_Slingshot.SlingshotLogic, m_Rigidbody, m_Thrust);
-            m_InitialPosition = transform.position;
+            m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Thrust, transform.position);
         }
 
         private void Start()
         {
-            m_PlayerControllerLogic.SubscribeEvents();
+            m_Slingshot.SubscribeOnTargetReleasedEvent(m_PlayerControllerLogic.Jump);
         }
 
         private void OnDestroy()
         {
-            m_PlayerControllerLogic.UnsubscribeEvents();
+            m_Slingshot.UnsubscribeOnTargetReleasedEvent(m_PlayerControllerLogic.Jump);
+        }
+        
+        public void Die()
+        {
+            //Do some die animation
+            m_PlayerControllerLogic.Reset();
         }
 
         public void Reset()
         {
-            transform.position = m_InitialPosition;
-            m_Rigidbody.velocity = Vector2.zero;
+            m_PlayerControllerLogic.Reset();
+            //Do some awake animation
         }
     }
 }

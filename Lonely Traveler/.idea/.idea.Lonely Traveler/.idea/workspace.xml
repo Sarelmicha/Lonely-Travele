@@ -12,6 +12,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85997bd0a5b743419f7356a48e26c8bb156c00/eb/55e8a8c6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/Spike.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/SpecialAbility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +78,9 @@
       <updated>1659799412220</updated>
       <workItem from="1659799419089" duration="17000" />
       <workItem from="1659799487198" duration="4365000" />
-      <workItem from="1660334827050" duration="1199000" />
+      <workItem from="1660334827050" duration="1570000" />
+      <workItem from="1660338060733" duration="557000" />
+      <workItem from="1660398235281" duration="3115000" />
     </task>
     <servers />
   </component>

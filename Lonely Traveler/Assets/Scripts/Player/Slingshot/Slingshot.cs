@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,32 +12,32 @@ namespace HappyFlow.LonelyTraveler.Player
     {
         [SerializeField] private CircleCollider2D SlingshotHolder;
         [SerializeField] private Image m_Image;
-      
+
         /// <summary>
         /// Responsible for handling all the logic of the slingshot
         /// </summary>
-        public SlingshotLogic SlingshotLogic { get; private set; }
+        private SlingshotLogic m_SlingshotLogic;
 
         private void Awake()
         {
-            SlingshotLogic = new SlingshotLogic(transform, SlingshotHolder.transform, SlingshotHolder.radius);
+            m_SlingshotLogic = new SlingshotLogic(transform, SlingshotHolder.transform, SlingshotHolder.radius);
         }
 
         private void Update()
         {          
-            SlingshotLogic.TryUpdatePosition();         
+            m_SlingshotLogic.TryUpdatePosition();         
         }
      
         private void OnMouseDown()
         {
             Appear();
-            SlingshotLogic.OnMouseDown();
+            m_SlingshotLogic.OnMouseDown();
         }
 
         private void OnMouseUp()
         {
             Disappear();
-            SlingshotLogic.OnMouseUp();
+            m_SlingshotLogic.OnMouseUp();
         }
 
         private void Appear()
@@ -47,6 +48,24 @@ namespace HappyFlow.LonelyTraveler.Player
         private void Disappear()
         {
             m_Image.enabled = false;
+        }
+
+        /// <summary>
+        /// Subscribe to the OnTargetReleased event
+        /// </summary>
+        /// <param name="action">The action to invoke when the OnTargetReleased event has invoke</param>
+        public void SubscribeOnTargetReleasedEvent(Action<Vector3> action)
+        {
+            m_SlingshotLogic.OnTargetReleased += action;
+        }
+        
+        /// <summary>
+        /// Unsubscribe to the OnTargetReleased event
+        /// </summary>
+        /// <param name="action">The action to remove from invoking when the OnTargetReleased event has invoke</param>
+        public void UnsubscribeOnTargetReleasedEvent(Action<Vector3> action)
+        {
+            m_SlingshotLogic.OnTargetReleased -= action;
         }
     }
 }

@@ -55,13 +55,19 @@ namespace HappyFlow.LonelyTraveler.Player
             m_SlingshotTransform.position = position;
         }
 
+        /// <summary>
+        /// Call when the mouse was released from the slingshot
+        /// </summary>
         public void OnMouseUp()
         {
             m_IsDragging = false;
             OnTargetReleased?.Invoke(m_SlingshotHolderTransform.position - m_SlingshotTransform.position);
             SetPosition(m_SlingshotHolderTransform.position);
         }
-
+        
+        /// <summary>
+        /// Call when the mouse was click on the the slingshot
+        /// </summary>
         public void OnMouseDown()
         {
             m_IsDragging = true;
