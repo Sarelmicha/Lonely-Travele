@@ -17,9 +17,9 @@ namespace HappyFlow.LonelyTraveler.World
         return;
       }
       
-      InvokeAbility();
+      InvokeAbility(player);
     }
     
-    protected abstract void InvokeAbility();
+    protected abstract void InvokeAbility(PlayerController playerController);
   }
 }

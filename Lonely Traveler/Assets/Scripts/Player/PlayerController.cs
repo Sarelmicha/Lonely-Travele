@@ -42,6 +42,11 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerControllerLogic.Reset();
             //Do some awake animation
         }
+
+        public void SetInitialPosition(Vector3 position)
+        {
+            m_PlayerControllerLogic.InitialPosition = position;
+        }
     }
 }
 
