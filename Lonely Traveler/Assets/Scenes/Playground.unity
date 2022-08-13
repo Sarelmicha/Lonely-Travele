@@ -2210,13 +2210,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aab9e6ea4aa5de49a72a2cef140a4cc, type: 3}
---- !u!1001 &6288149434155017502
+--- !u!1001 &3584239784987346488
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 629334622}
     m_Modifications:
+    - target: {fileID: 1053449843, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6288149435052327156, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2304,6 +2308,14 @@ PrefabInstance:
     - target: {fileID: 6288149435052327159, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
       propertyPath: m_Name
       value: CheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288149435052327159, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288149435650761725, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0211874f05c03fb42b420b0448c2014c, type: 3}
