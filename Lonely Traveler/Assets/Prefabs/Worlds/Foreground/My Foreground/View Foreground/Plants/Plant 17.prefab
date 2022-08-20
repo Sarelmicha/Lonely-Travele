@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1009479408012388232}
   - component: {fileID: 8084629655694362420}
   - component: {fileID: 7925893428746243588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.Serialization;
 
 namespace HappyFlow.LonelyTraveler.Player
 {
