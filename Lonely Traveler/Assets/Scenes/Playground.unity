@@ -597,28 +597,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 1000}
   m_EdgeRadius: 0
---- !u!114 &479389086 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1383441284996169235, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-  m_PrefabInstance: {fileID: 1383441284344862856}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958d2ede50befac40880a58882b8de24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &479389088 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1383441284996169238, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-  m_PrefabInstance: {fileID: 1383441284344862856}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,11 +1153,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0185b531f44817042862b3c568d3147c, type: 3}
---- !u!58 &1091308321 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1383441284699263608, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-  m_PrefabInstance: {fileID: 1383441284344862856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1133755818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,16 +1450,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f88867dd3e63848888182343ecfc46, type: 3}
---- !u!1 &1682061153 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1383441284793917111, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-  m_PrefabInstance: {fileID: 1383441284344862856}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1682061157 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1383441284793917132, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-  m_PrefabInstance: {fileID: 1383441284344862856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1861710035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1805,61 +1768,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1383441284621990844, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Intensity
-      value: 1
+    - target: {fileID: 1383441284996169237, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
+      propertyPath: m_Radius
+      value: 39.563736
       objectReference: {fileID: 0}
-    - target: {fileID: 1383441284699263611, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 1682061153}
-    - target: {fileID: 1383441284793917129, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.b
-      value: 1
+    - target: {fileID: 1383441284996169237, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1383441284793917129, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284793917129, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284793917131, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Thrust
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284793917131, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284793917131, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Rigidbody
-      value: 
-      objectReference: {fileID: 1682061157}
-    - target: {fileID: 1383441284793917131, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Slingshot
-      value: 
-      objectReference: {fileID: 479389086}
-    - target: {fileID: 1383441284996169235, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Image
-      value: 
-      objectReference: {fileID: 479389088}
-    - target: {fileID: 1383441284996169235, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: SlingshotHolder
-      value: 
-      objectReference: {fileID: 1091308321}
-    - target: {fileID: 1383441284996169238, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.b
-      value: 0.5377358
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284996169238, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.g
-      value: 0.5377358
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383441284996169238, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5377358
+    - target: {fileID: 1383441284996169237, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16553114
       objectReference: {fileID: 0}
     - target: {fileID: 1383441285299376774, guid: 8c9bb3fac53c36b4fb886e35c0e28e10, type: 3}
       propertyPath: m_Camera
