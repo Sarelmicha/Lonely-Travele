@@ -7,9 +7,9 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerControllerLogic
     {
-        private readonly SlingshotLogic m_SlingshotLogic;
         private readonly Rigidbody2D m_PlayerRigidbody;
         private readonly float m_Thrust;
+        private readonly PlayerSpotlight m_PlayerSpotlight;
         public Vector3 InitialPosition { get; set; }
 
         /// <summary>
@@ -17,11 +17,13 @@ namespace HappyFlow.LonelyTraveler.Player
         /// </summary>
         /// <param name="playerRigidbody">The player rigidbody</param>
         /// <param name="thrust">A float that will indicate the thrust of the player jump</param>
-        public PlayerControllerLogic(Rigidbody2D playerRigidbody, float thrust, Vector3 initialPosition)
+        /// <param name="initialPosition">The initial position of the player</param>
+        public PlayerControllerLogic(Rigidbody2D playerRigidbody, float thrust, Vector3 initialPosition, PlayerSpotlight playerSpotlight)
         {
             m_PlayerRigidbody = playerRigidbody;
             m_Thrust = thrust;
             InitialPosition = initialPosition;
+            m_PlayerSpotlight = playerSpotlight;
         }
         
         /// <summary>
@@ -40,6 +42,16 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             m_PlayerRigidbody.transform.position = InitialPosition;
             m_PlayerRigidbody.velocity = Vector2.zero;
+            m_PlayerSpotlight.Reset();
+        }
+
+        /// <summary>
+        /// Apply force to the player in a certain vector
+        /// </summary>
+        /// <param name="force"></param>
+        public void AddForce(Vector2 force)
+        {
+            m_PlayerRigidbody.AddForce(force);
         }
     }
 }

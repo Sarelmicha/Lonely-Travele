@@ -14,17 +14,16 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private float m_TimeToLiveInSeconds;
 
         private float m_NumOfCurrentSeconds;
-        private bool m_IsStay = false;
-        
+
         private IEnumerator TryToFade()
         {
-            while (m_IsStay && m_NumOfCurrentSeconds < m_TimeToLiveInSeconds)
+            while (m_IsPlayerInsideCollider && m_NumOfCurrentSeconds < m_TimeToLiveInSeconds)
             {
                 m_NumOfCurrentSeconds++;
                 yield return new WaitForSeconds(1);
             }
             
-            if (m_IsStay)
+            if (m_IsPlayerInsideCollider)
             {
                 //Do some call fading animation
                 transform.gameObject.SetActive(false);
@@ -33,13 +32,11 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
 
         protected override void OnPlayerCollisionEnter2D(PlayerController playerController)
         {
-            m_IsStay = true;
             StartCoroutine(TryToFade());
         }
 
         protected override void OnPlayerCollisionExist2D(PlayerController playerController)
         {
-            m_IsStay = false;
             m_NumOfCurrentSeconds = 0;
         }
     }

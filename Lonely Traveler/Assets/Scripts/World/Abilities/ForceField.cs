@@ -1,12 +1,22 @@
+using System;
 using HappyFlow.LonelyTraveler.Player;
 using HappyFlow.LonelyTraveler.World;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class ForceField : TriggerAbility
+namespace HappyFlow.LonelyTraveler.World.Enemies
 {
-    [SerializeField] private Vector2 m_Force;
-    protected override void OnPlayerTriggerStay2D(PlayerController playerController)
+    public class ForceField : TriggerAbility
     {
-        playerController.AddForce(m_Force);
-    }
+        [SerializeField] private Vector2 m_Force;
+
+        private void Update()
+        {
+            if (m_IsPlayerInsideCollider)
+            {
+                m_PlayerController.AddForce(m_Force);
+            }
+        }
+    }   
 }
+

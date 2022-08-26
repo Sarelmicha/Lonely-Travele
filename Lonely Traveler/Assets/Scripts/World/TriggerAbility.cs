@@ -8,39 +8,29 @@ namespace HappyFlow.LonelyTraveler.World
   /// </summary>
   public abstract class TriggerAbility : MonoBehaviour
   {
+    protected PlayerController m_PlayerController;
+    protected bool m_IsPlayerInsideCollider;
+
     private void OnTriggerEnter2D(Collider2D col)
     {
-      PlayerController m_PlayerController;
-
       if (IsPlayerCollide(col, out m_PlayerController))
       {
+        m_IsPlayerInsideCollider = true;
         OnPlayerTriggerEnter2D(m_PlayerController);
       }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-      PlayerController m_PlayerController;
-
       if (IsPlayerCollide(col, out m_PlayerController))
       {
+        m_IsPlayerInsideCollider = false;
         OnPlayerTriggerExit2D(m_PlayerController);
       }
     }
-       
-    private void OnTriggerStay2D(Collider2D col)
-    {
-      PlayerController m_PlayerController;
-
-      if (IsPlayerCollide(col, out m_PlayerController))
-      {
-        OnPlayerTriggerStay2D(m_PlayerController);
-      }
-    }
-
-    protected virtual void OnPlayerTriggerEnter2D(PlayerController playerController) {}
+    
+    protected virtual void OnPlayerTriggerEnter2D(PlayerController playerController) { }
     protected virtual void OnPlayerTriggerExit2D(PlayerController playerController) {}
-    protected virtual void OnPlayerTriggerStay2D(PlayerController playerController) {}
     
     private bool IsPlayerCollide(Collider2D col, out PlayerController playerController)
     { 

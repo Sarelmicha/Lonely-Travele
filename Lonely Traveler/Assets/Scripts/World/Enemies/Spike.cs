@@ -1,6 +1,6 @@
 using HappyFlow.LonelyTraveler.Player;
 
-namespace HappyFlow.LonelyTraveler.World
+namespace HappyFlow.LonelyTraveler.World.Enemies
 {
     /// <summary>
     /// This class responsible for handling the Spike enemy. whenever the player hit the spike, player will die.
