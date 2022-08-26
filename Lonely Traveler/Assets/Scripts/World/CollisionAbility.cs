@@ -34,19 +34,18 @@ namespace HappyFlow.LonelyTraveler.World
 
            if (IsPlayerCollide(col, out m_PlayerController))
            {
-               OnPlayerCollision2D(m_PlayerController);
+               OnPlayerCollisionStay2D(m_PlayerController);
            }
        }
-        
-        protected abstract void OnPlayerCollisionEnter2D(PlayerController playerController);
-        protected virtual void OnPlayerCollisionExist2D(PlayerController playerController) {}
-        protected virtual void OnPlayerCollision2D(PlayerController playerController) {}
 
-        private bool IsPlayerCollide(Collision2D col, out PlayerController playerController)
-        {
-            playerController = col.gameObject.GetComponent<PlayerController>();
+       protected virtual void OnPlayerCollisionEnter2D(PlayerController playerController) {}
+       protected virtual void OnPlayerCollisionExist2D(PlayerController playerController) {}
+       protected virtual void OnPlayerCollisionStay2D(PlayerController playerController) {}
 
-            return playerController;
-        }
+       private bool IsPlayerCollide(Collision2D col, out PlayerController playerController)
+       { 
+           playerController = col.gameObject.GetComponent<PlayerController>();
+           return playerController;
+       }
     }
 }

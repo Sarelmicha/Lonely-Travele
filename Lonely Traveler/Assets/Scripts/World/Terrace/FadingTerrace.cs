@@ -3,7 +3,7 @@ using HappyFlow.LonelyTraveler.Player;
 using UnityEngine;
 
 
-namespace HappyFlow.LonelyTraveler.World
+namespace HappyFlow.LonelyTraveler.World.Terrace
 {
     /// <summary>
     /// This class responsible for handling the Fading Terrace. whenever the player enter the collider of this terrace,
