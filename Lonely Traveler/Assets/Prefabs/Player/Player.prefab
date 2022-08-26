@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130, y: 130}
+  m_AnchoredPosition: {x: 0, y: 76.00003}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383441284699263610
 CanvasRenderer:
@@ -207,9 +207,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.84649736, y: -0.70998526}
+  m_Offset: {x: 0.84649736, y: 0.96407104}
   serializedVersion: 2
-  m_Radius: 56.544594
+  m_Radius: 48.174343
 --- !u!114 &1383441284699263611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +262,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 0, y: 76}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383441284793917130
 CanvasRenderer:
@@ -337,9 +337,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.00001547888}
   serializedVersion: 2
-  m_Radius: 39.5
+  m_Radius: 29.455704
 --- !u!114 &1383441284793917131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,9 +446,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.16553114}
+  m_Offset: {x: 0, y: -0.26988974}
   serializedVersion: 2
-  m_Radius: 39.563736
+  m_Radius: 30.065184
 --- !u!114 &1383441284996169235
 MonoBehaviour:
   m_ObjectHideFlags: 0

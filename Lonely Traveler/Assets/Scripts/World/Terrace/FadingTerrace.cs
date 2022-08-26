@@ -27,7 +27,7 @@ namespace HappyFlow.LonelyTraveler.World
             if (m_IsStay)
             {
                 //Do some call fading animation
-                Destroy(transform.gameObject); 
+                transform.gameObject.SetActive(false);
             }
         }
 

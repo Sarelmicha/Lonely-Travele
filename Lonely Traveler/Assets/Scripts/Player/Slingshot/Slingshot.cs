@@ -21,6 +21,7 @@ namespace HappyFlow.LonelyTraveler.Player
         private void Awake()
         {
             m_SlingshotLogic = new SlingshotLogic(transform, SlingshotHolder.transform, SlingshotHolder.radius);
+            SlingshotHolder.enabled = false;
         }
 
         private void Update()
