@@ -54,6 +54,11 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
 
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
+            if (IsReachedTarget())
+            {
+                return;
+            }
+
             m_IsMoving = true;
         }
     }
