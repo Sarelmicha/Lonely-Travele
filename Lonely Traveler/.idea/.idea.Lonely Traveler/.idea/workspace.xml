@@ -16,6 +16,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85997bd0a5b743419f7356a48e26c8bb156c00/eb/55e8a8c6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rewards/IReward.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplayLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ShakeBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/ForceField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/LightReducer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,7 +94,8 @@
       <workItem from="1660398235281" duration="3115000" />
       <workItem from="1660405473771" duration="1350000" />
       <workItem from="1661006650094" duration="5682000" />
-      <workItem from="1661513446771" duration="15455000" />
+      <workItem from="1661513446771" duration="15551000" />
+      <workItem from="1661609140832" duration="4041000" />
     </task>
     <servers />
   </component>

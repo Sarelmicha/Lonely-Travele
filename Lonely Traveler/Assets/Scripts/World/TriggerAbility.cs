@@ -29,7 +29,7 @@ namespace HappyFlow.LonelyTraveler.World
       }
     }
     
-    protected virtual void OnPlayerTriggerEnter2D(PlayerController playerController) { }
+    protected virtual void OnPlayerTriggerEnter2D(PlayerController playerController) {}
     protected virtual void OnPlayerTriggerExit2D(PlayerController playerController) {}
     
     private bool IsPlayerCollide(Collider2D col, out PlayerController playerController)
