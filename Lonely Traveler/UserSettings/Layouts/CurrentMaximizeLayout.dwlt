@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3e6d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: ea11feff1a99feffcabafeff8ed0feff1ad1feff34d1feff3ed1feff42d1feff52d1feff62d1feff92d1feffa2d1feff8cdcfeff6cddfeff4cdefeff76e6feff10ecfeffe4ecfeffc4edfeffa4eefeffc0fbfeff7afcfeff54fdfeff7834fffffaf9ffffbefaffffcefaffff0efbffff166b00002c6b00004a6b0000546b0000606b0000361401005e140100bc140100f21401005a150100a4150100d2530100125401005a540100c65401006a57010092580100ac5a0100065d0100925f01000e61010024610100426101004c610100
       m_RenameOverlay:
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 579.2001
     height: 676
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -500,9 +500,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -84.77719, y: -142.49469, z: 13.5}
+    m_Target: {x: 139.51617, y: -240.8918, z: 56.818047}
     speed: 2
-    m_Value: {x: -84.77719, y: -142.49469, z: 13.5}
+    m_Value: {x: 139.51617, y: -240.8918, z: 56.818047}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -553,9 +553,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 87.21001
+    m_Target: 59.02834
     speed: 2
-    m_Value: 87.21001
+    m_Value: 59.02834
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -599,8 +599,8 @@ MonoBehaviour:
     y: 0
     width: 212.79993
     height: 676
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -743,22 +743,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Worlds
+    - Assets/GUIPack-Halloween/Sources/PNG/SweetsIcons/Lillipop_Candies
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Worlds
+  - Assets/GUIPack-Halloween/Sources/PNG/SweetsIcons/Lillipop_Candies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 49.200012}
-    m_SelectedIDs: 3e6d0000
-    m_LastClickedID: 27966
-    m_ExpandedIDs: 000000003a6d00003e6d0000c46e0000046f0000c8800000089100006291000060e400005ee7000030eb000094ef0000fcef0000cef300001677010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 98}
+    m_SelectedIDs: 10f90000
+    m_LastClickedID: 63760
+    m_ExpandedIDs: 000000003a6d00003e6d0000c46e0000046f0000c8800000089100006291000060e400005ee7000066e9000030eb000094ef0000fcef0000cef30000e0f3000008f800001677010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -786,7 +786,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a6d0000046f0000c8800000089100006291000060e400005ee7000030eb000094ef0000fcef0000cef300001677010000ca9a3bffffff7f
+    m_ExpandedIDs: 000000003a6d00003e6d0000046f0000c8800000089100006291000060e400005ee7000030eb000094ef0000fcef0000cef300001677010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -811,10 +811,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3e6d0000
-    m_LastClickedInstanceID: 27966
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 00ee0000
+    m_ExpandedInstanceIDs: 00ee00001ceb0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -838,7 +838,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 102.5}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 301
