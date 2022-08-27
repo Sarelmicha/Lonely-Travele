@@ -2168,13 +2168,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 595986362}
     m_Modifications:
+    - target: {fileID: 6447100367085737821, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447100367085737823, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: ShapeModule.type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447100367085737823, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447100367085737823, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447100367085737823, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9090909
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447100367085737823, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb7c847df99dc40d28acc5c2e9127122, type: 3}
     - target: {fileID: 6447100367274625872, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_Name
       value: Light Reducer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6447100367274625872, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6447100367274625875, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_Pivot.x
@@ -2206,7 +2226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447100367274625875, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 6447100367274625875, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2242,7 +2262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447100367274625875, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 73
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6447100367274625875, guid: c3c6c848fca819c409db6fb5911f7826, type: 3}
       propertyPath: m_AnchoredPosition.y
