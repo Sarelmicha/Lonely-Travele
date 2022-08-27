@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rewards/IReward.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplayLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ShakeBehavior.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,7 +96,7 @@
       <workItem from="1660405473771" duration="1350000" />
       <workItem from="1661006650094" duration="5682000" />
       <workItem from="1661513446771" duration="15551000" />
-      <workItem from="1661609140832" duration="4041000" />
+      <workItem from="1661609140832" duration="5355000" />
     </task>
     <servers />
   </component>
