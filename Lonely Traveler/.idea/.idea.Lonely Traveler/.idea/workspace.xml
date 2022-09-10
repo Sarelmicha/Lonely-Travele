@@ -27,7 +27,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplayLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ShakeBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/MovementSwing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/DoTweenShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/IShakeTweener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/ForceField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/LightReducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/Spike.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +112,7 @@
       <workItem from="1661710152029" duration="2505000" />
       <workItem from="1661800197814" duration="6088000" />
       <workItem from="1661806443470" duration="245000" />
-      <workItem from="1662806171114" duration="4886000" />
+      <workItem from="1662806171114" duration="7600000" />
     </task>
     <servers />
   </component>

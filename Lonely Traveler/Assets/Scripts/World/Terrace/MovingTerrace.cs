@@ -12,37 +12,21 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private Transform m_Target;
         [SerializeField] private float m_Speed;
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
+        private IMovementTweener m_MovementTweener;
         
-        private Vector2 m_InitialPosition;
-        private bool m_IsMoving;
-
         private void Awake()
         {
-            m_InitialPosition = transform.position;
+            m_MovementTweener = new DoTweenTweener();
         }
-
-        private void Update()
-        {
-            if (m_IsMoving)
-            {
-                Move();
-            }
-        }
-
+        
         private void Move()
         {
-            transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
-
-            if (IsReachedTarget())
-            {
-                OnTargetReached();
-            }
+            m_MovementTweener.MoveTo(transform, m_Target.position, m_Speed, null, OnTargetReached);
         }
 
         private void OnTargetReached()
         {
-            m_IsMoving = false;
-            m_ShakeBehavior.TriggerShake();
+            m_ShakeBehavior.Shake();
         }
 
         private bool IsReachedTarget()
@@ -57,7 +41,7 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
                 return;
             }
 
-            m_IsMoving = true;
+            Move();
         }
     }
   

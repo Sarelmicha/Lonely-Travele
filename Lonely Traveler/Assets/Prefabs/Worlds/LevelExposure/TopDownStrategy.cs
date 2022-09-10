@@ -13,12 +13,12 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         [SerializeField] private float m_FromTargetDuration;
         [SerializeField] private float m_StartDelay;
         private Vector3 m_InitialPosition;
-        private IMovementTweener m_DoTweenTweener;
+        private IMovementTweener m_MovementTweener;
 
         private void Awake()
         {
             m_InitialPosition = transform.position;
-            m_DoTweenTweener = new DoTweenTweener();
+            m_MovementTweener = new DoTweenTweener();
         }
 
         private IEnumerator Start()
@@ -29,9 +29,9 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
 
         public void Expose()
         {
-            m_DoTweenTweener.MoveTo(transform, m_Target.position, m_ToTargetDuration, new MovementSwing(10, 1), () =>
+            m_MovementTweener.MoveTo(transform, m_Target.position, m_ToTargetDuration, new MovementSwing(10, 1), () =>
             {
-                m_DoTweenTweener.MoveTo(transform, m_InitialPosition, m_FromTargetDuration, new MovementSwing(10, 1));
+                m_MovementTweener.MoveTo(transform, m_InitialPosition, m_FromTargetDuration, new MovementSwing(10, 1));
             });
         }
     }
