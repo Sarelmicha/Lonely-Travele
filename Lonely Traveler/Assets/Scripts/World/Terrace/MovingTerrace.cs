@@ -14,13 +14,11 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
         
         private Vector2 m_InitialPosition;
-        private float m_ConvertedSpeed;
         private bool m_IsMoving;
 
         private void Awake()
         {
             m_InitialPosition = transform.position;
-            m_ConvertedSpeed = m_Speed * Time.deltaTime;
         }
 
         private void Update()
@@ -33,7 +31,7 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
 
         private void Move()
         {
-            transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_ConvertedSpeed);
+            transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
 
             if (IsReachedTarget())
             {
@@ -49,7 +47,7 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
 
         private bool IsReachedTarget()
         {
-            return Vector2.Distance(transform.position, m_Target.position) < m_ConvertedSpeed;
+            return Vector2.Distance(transform.position, m_Target.position) < m_Speed * Time.deltaTime;
         }
 
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
