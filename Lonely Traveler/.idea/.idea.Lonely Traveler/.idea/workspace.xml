@@ -12,6 +12,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4e5075cf57c3416eb788a8bd41817a841f800/16/f6ceee2d/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4e5075cf57c3416eb788a8bd41817a841f800/df/c756ee69/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85997bd0a5b743419f7356a48e26c8bb156c00/96/96a4af2c/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -39,7 +42,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Terrace/MovingTerrace.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/TriggerAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/OutlineGenerator/OutlineGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Editor/BurstDisassembler.Core.ARM64.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.2/Editor/LookDev/ComparisonGizmoController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/InterceptedEventsPreview.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/EventSystem/InterceptedEventsPreviewTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,10 +90,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7480">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7480" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -116,6 +122,7 @@
       <workItem from="1661800197814" duration="6088000" />
       <workItem from="1661806443470" duration="245000" />
       <workItem from="1662806171114" duration="7600000" />
+      <workItem from="1664034917677" duration="5534000" />
     </task>
     <servers />
   </component>
@@ -142,6 +149,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/FollowCamera.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\FollowCamera.cs" initialLine="39" containingFunctionPresentation="method 'OnPlayerTriggerExit2D'">
+            <startOffsets>
+              <option value="1198" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1268" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/FollowCamera.cs</url>
+          <line>25</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\FollowCamera.cs" initialLine="27" containingFunctionPresentation="method 'OnPlayerTriggerExit2D'">
+            <startOffsets>
+              <option value="784" />
+            </startOffsets>
+            <endOffsets>
+              <option value="900" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
