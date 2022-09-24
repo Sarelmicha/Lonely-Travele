@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -6,15 +7,15 @@ namespace HappyFlow.LonelyTraveler.Player
 {
     public class PlayerSpotlight : MonoBehaviour
     {
+        [SerializeField] private float m_InitialSpotlightRadius;
+        [SerializeField] private float m_IluminateSpotlightRate;
         private Light2D m_Spotlight;
-        private float m_InitialLight;
         private PlayerSpotlightLogic m_PlayerSpotlightLogic;
 
         private void Awake()
         {
             m_Spotlight = GetComponent<Light2D>();
-            m_InitialLight = m_Spotlight.pointLightOuterRadius;
-            m_PlayerSpotlightLogic = new PlayerSpotlightLogic(m_Spotlight, m_InitialLight);
+            m_PlayerSpotlightLogic = new PlayerSpotlightLogic(m_Spotlight, m_InitialSpotlightRadius);
         }
         
         /// <summary>
@@ -23,7 +24,8 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="value">The value to increase from the light radius</param>
         public void IncreaseLight(float value)
         {
-            m_PlayerSpotlightLogic.IncreaseLight(value);        }
+            m_PlayerSpotlightLogic.IncreaseLight(value);
+        }
 
         /// <summary>
         /// Reduce the light radius of the player
@@ -50,6 +52,18 @@ namespace HappyFlow.LonelyTraveler.Player
         public void UnsubscribeOnLightReachedZeroEvent(Action action)
         {
             m_PlayerSpotlightLogic.OnLightReachedZero -= action;
+        }
+
+        /// <summary>
+        /// Illuminate the spotlight to the initial light
+        /// </summary>
+        public IEnumerator IlluminateSpotlight()
+        {
+            while (m_Spotlight.pointLightOuterRadius < m_InitialSpotlightRadius)
+            {
+                m_PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate);
+                yield return null;
+            }
         }
     }
 }

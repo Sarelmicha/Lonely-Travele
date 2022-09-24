@@ -1,20 +1,14 @@
 using HappyFlow.LonelyTraveler.Player;
+using HappyFlow.LonelyTraveler.World;
 using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler
 {
-    public class Boundary : MonoBehaviour
+    public class Boundary : TriggerAbility
     {
-        private void OnTriggerEnter2D(Collider2D col)
+        protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
-            var player = col.GetComponent<PlayerController>();
-            
-            if (!player)
-            {
-                return;
-            }
-
-            player.Reset();
+            playerController.Die();
         }
     }
 }

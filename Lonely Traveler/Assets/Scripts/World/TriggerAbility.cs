@@ -1,3 +1,4 @@
+using System;
 using HappyFlow.LonelyTraveler.Player;
 using UnityEngine;
 
@@ -10,6 +11,23 @@ namespace HappyFlow.LonelyTraveler.World
   {
     protected PlayerController m_PlayerController;
     protected bool m_IsPlayerInsideCollider;
+    private LevelManager m_LevelManager;
+    
+    private void Start()
+    {
+      var go = GameObject.FindGameObjectWithTag("LevelManager");
+
+      if (go != null)
+      {
+        m_LevelManager = go.GetComponent<LevelManager>();
+      }
+      m_LevelManager.OnLevelShouldRestart += Reset;
+    }
+
+    private void OnDestroy()
+    {
+      m_LevelManager.OnLevelShouldRestart -= Reset;
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -31,7 +49,9 @@ namespace HappyFlow.LonelyTraveler.World
     
     protected virtual void OnPlayerTriggerEnter2D(PlayerController playerController) {}
     protected virtual void OnPlayerTriggerExit2D(PlayerController playerController) {}
-    
+
+    protected virtual void Reset() {}
+
     private bool IsPlayerCollide(Collider2D col, out PlayerController playerController)
     { 
       playerController = col.gameObject.GetComponent<PlayerController>();

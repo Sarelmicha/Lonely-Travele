@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using HappyFlow.LonelyTraveler.Player;
 using HappyFlow.LonelyTraveler.Utils;
 using UnityEngine;
@@ -13,10 +10,12 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private float m_Speed;
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
         private IMovementTweener m_MovementTweener;
+        private Vector2 m_InitialPosition;
         
         private void Awake()
         {
             m_MovementTweener = new DoTweenTweener();
+            m_InitialPosition = transform.position;
         }
         
         private void Move()
@@ -42,6 +41,11 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
             }
 
             Move();
+        }
+
+        protected override void Reset()
+        {
+            transform.position = m_InitialPosition;
         }
     }
   

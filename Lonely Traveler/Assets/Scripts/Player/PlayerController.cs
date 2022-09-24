@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Rigidbody2D = UnityEngine.Rigidbody2D;
 
@@ -8,30 +9,42 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
+        public Action OnPlayerDied;
+        
         [SerializeField] private float m_Thrust;
         [SerializeField] private Slingshot m_Slingshot;
         
         private Rigidbody2D m_Rigidbody;
         private PlayerControllerLogic m_PlayerControllerLogic;
         private PlayerSpotlight m_PlayerSpotlight;
+        private LevelManager m_LevelManager;
 
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
             m_PlayerSpotlight = GetComponentInChildren<PlayerSpotlight>();
             m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Thrust, transform.position, m_PlayerSpotlight);
+            
+            var go = GameObject.FindGameObjectWithTag("LevelManager");
+
+            if (go != null)
+            {
+                m_LevelManager = go.GetComponent<LevelManager>();
+            }
         }
         
         private void Start()
         {
             m_Slingshot.SubscribeOnTargetReleasedEvent(m_PlayerControllerLogic.Jump);
             m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(m_PlayerControllerLogic.Reset);
+            m_LevelManager.OnLevelShouldRestart += Reset;
         }
 
         private void OnDestroy()
         {
             m_Slingshot.UnsubscribeOnTargetReleasedEvent(Jump);
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
+            m_LevelManager.OnLevelShouldRestart -= Reset;
         }
         
         /// <summary>
@@ -40,7 +53,7 @@ namespace HappyFlow.LonelyTraveler.Player
         public void Die()
         {
             //Do some die animation
-            m_PlayerControllerLogic.Reset();
+            OnPlayerDied?.Invoke();
         }
 
         /// <summary>
@@ -68,6 +81,14 @@ namespace HappyFlow.LonelyTraveler.Player
         public void AddForce(Vector2 force)
         {
             m_PlayerControllerLogic.AddForce(force);
+        }
+
+        /// <summary>
+        /// Illuminate the spotlight to the initial light
+        /// </summary>
+        public void IlluminateSpotlight()
+        {
+            StartCoroutine(m_PlayerSpotlight.IlluminateSpotlight());
         }
 
         /// <summary>

@@ -23,7 +23,7 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
             Collect();
         }
 
-        private void Reset()
+        protected override void Reset()
         {
             gameObject.SetActive(true);
         }
