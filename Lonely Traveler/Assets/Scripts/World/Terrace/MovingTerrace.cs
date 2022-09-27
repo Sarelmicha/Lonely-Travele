@@ -45,8 +45,8 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
 
         protected override void Reset()
         {
+            m_MovementTweener.StopTween();
             transform.position = m_InitialPosition;
         }
     }
-  
 }

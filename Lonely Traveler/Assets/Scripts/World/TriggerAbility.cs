@@ -17,10 +17,13 @@ namespace HappyFlow.LonelyTraveler.World
     {
       var go = GameObject.FindGameObjectWithTag("LevelManager");
 
-      if (go != null)
+      if (go == null)
       {
-        m_LevelManager = go.GetComponent<LevelManager>();
+        Debug.Log("The level manager has not been found on scene.");
+        return;
       }
+      
+      m_LevelManager = go.GetComponent<LevelManager>();
       m_LevelManager.OnLevelShouldRestart += Reset;
     }
 
