@@ -14,7 +14,7 @@ namespace HappyFlow.LonelyTraveler.Player
 
         private Vector3 m_MousePosition;
         private bool m_IsDragging;
-
+        
         /// <summary>
         /// Invoke when the player release the target on a certain location. 
         /// </summary>

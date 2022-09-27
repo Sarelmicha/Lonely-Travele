@@ -9,6 +9,9 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
+        /// <summary>
+        /// Invoked anytime the player died.
+        /// </summary>
         public Action OnPlayerDied;
         
         [SerializeField] private float m_Thrust;
@@ -18,6 +21,7 @@ namespace HappyFlow.LonelyTraveler.Player
         private PlayerControllerLogic m_PlayerControllerLogic;
         private PlayerSpotlight m_PlayerSpotlight;
         private LevelManager m_LevelManager;
+        private bool m_CanJump;
 
         private void Awake()
         {
@@ -35,9 +39,10 @@ namespace HappyFlow.LonelyTraveler.Player
         
         private void Start()
         {
-            m_Slingshot.SubscribeOnTargetReleasedEvent(m_PlayerControllerLogic.Jump);
-            m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(m_PlayerControllerLogic.Reset);
+            m_Slingshot.SubscribeOnTargetReleasedEvent(Jump);
+            m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart += Reset;
+            m_LevelManager.OnLevelStarted += OnLevelStarted;
         }
 
         private void OnDestroy()
@@ -45,6 +50,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_Slingshot.UnsubscribeOnTargetReleasedEvent(Jump);
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart -= Reset;
+            m_LevelManager.OnLevelStarted -= OnLevelStarted;
         }
         
         /// <summary>
@@ -53,7 +59,7 @@ namespace HappyFlow.LonelyTraveler.Player
         public void Die()
         {
             //Do some die animation
-            OnPlayerDied?.Invoke();
+            m_LevelManager.OnLevelShouldRestart?.Invoke();
         }
 
         /// <summary>
@@ -86,9 +92,10 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Illuminate the spotlight to the initial light
         /// </summary>
-        public void IlluminateSpotlight()
+        /// <param name="onComplete">Invoke when the spotlight finished illuminate</param>
+        private void IlluminateSpotlight(Action onComplete = null)
         {
-            StartCoroutine(m_PlayerSpotlight.IlluminateSpotlight());
+            StartCoroutine(m_PlayerSpotlight.IlluminateSpotlight(onComplete));
         }
 
         /// <summary>
@@ -111,7 +118,28 @@ namespace HappyFlow.LonelyTraveler.Player
         
         private void Jump(Vector3 position)
         {
+            if (!m_CanJump)
+            {
+                return;
+            }
+
             m_PlayerControllerLogic.Jump(position);
+        }
+
+        private void OnLevelStarted()
+        {
+            IlluminateSpotlight(EnableJump);
+          
+        }
+
+        private void EnableJump()
+        {
+            m_CanJump = true;
+        }
+
+        private void DisableJump()
+        {
+            m_CanJump = false;
         }
     }
 }

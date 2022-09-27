@@ -57,13 +57,16 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Illuminate the spotlight to the initial light
         /// </summary>
-        public IEnumerator IlluminateSpotlight()
+        /// <param name="onComplete">Invoke when the spotlight finished illuminate</param>
+        public IEnumerator IlluminateSpotlight(Action onComplete = null)
         {
             while (m_Spotlight.pointLightOuterRadius < m_InitialSpotlightRadius)
             {
                 m_PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate);
                 yield return null;
             }
+            
+            onComplete?.Invoke();
         }
     }
 }
