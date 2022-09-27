@@ -59,7 +59,7 @@ namespace HappyFlow.LonelyTraveler.Player
         public void Die()
         {
             //Do some die animation
-            m_LevelManager.OnLevelShouldRestart?.Invoke();
+            m_LevelManager.StartRestartLevel();
         }
 
         /// <summary>

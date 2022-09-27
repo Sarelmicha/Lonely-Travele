@@ -123,7 +123,7 @@
       <workItem from="1661806443470" duration="245000" />
       <workItem from="1662806171114" duration="7600000" />
       <workItem from="1664034917677" duration="13938000" />
-      <workItem from="1664256867622" duration="5404000" />
+      <workItem from="1664256867622" duration="9449000" />
     </task>
     <servers />
   </component>
@@ -178,56 +178,17 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
-          <line>120</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerController.cs" initialLine="119" containingFunctionPresentation="method 'Jump'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="43" containingFunctionPresentation="method 'RestartLevel'">
             <startOffsets>
-              <option value="4055" />
+              <option value="1059" />
             </startOffsets>
             <endOffsets>
-              <option value="4070" />
+              <option value="1093" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
-          <line>125</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerController.cs" initialLine="124" containingFunctionPresentation="method 'Jump'">
-            <startOffsets>
-              <option value="4136" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4175" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/SlingshotLogic.cs</url>
-          <line>63</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\SlingshotLogic.cs" initialLine="63" containingFunctionPresentation="method 'OnMouseUp'">
-            <startOffsets>
-              <option value="1985" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2079" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerControllerLogic.cs</url>
-          <line>34</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerControllerLogic.cs" initialLine="34" containingFunctionPresentation="method 'Jump'">
-            <startOffsets>
-              <option value="1422" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1468" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
