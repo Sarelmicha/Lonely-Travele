@@ -105,7 +105,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 138.3
+  m_PointLightOuterRadius: 0
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e057698047cb847ab894d639c8417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_InitialSpotlightRadius: 120
+  m_IluminateSpotlightRate: 2
 --- !u!1 &1383441284699263590
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 76.00003}
-  m_SizeDelta: {x: 110, y: 110}
+  m_SizeDelta: {x: 220, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383441284699263610
 CanvasRenderer:
@@ -222,7 +224,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.84649736, y: 0.96407104}
   serializedVersion: 2
-  m_Radius: 48.174343
+  m_Radius: 100
 --- !u!114 &1383441284699263611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +278,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 76}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383441284793917130
 CanvasRenderer:
@@ -306,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 300687eb4aec9d1468b066895cc17b0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00ba0a2c7dd6543788097493c69ed3c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -352,7 +354,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.00001547888}
   serializedVersion: 2
-  m_Radius: 29.455704
+  m_Radius: 60
 --- !u!114 &1383441284793917131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b08458ce68c2b4c8bc2537f6228c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 500
+  m_Thrust: 280
   m_Slingshot: {fileID: 1383441284996169235}
 --- !u!1 &1383441284996169233
 GameObject:
@@ -405,7 +407,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383441284996169239
 CanvasRenderer:
@@ -435,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b2313d31d8c1e4510a751934343b5211, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -458,9 +460,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.26988974}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 30.065184
+  m_Radius: 65
 --- !u!114 &1383441284996169235
 MonoBehaviour:
   m_ObjectHideFlags: 0
