@@ -26,8 +26,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rewards/IReward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HUD/PointDisplayLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ShakeBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/DoTweenShake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/IShakeTweener.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,6 +125,7 @@
       <workItem from="1664034917677" duration="13938000" />
       <workItem from="1664256867622" duration="9449000" />
       <workItem from="1664389852601" duration="3315000" />
+      <workItem from="1664541879419" duration="1666000" />
     </task>
     <servers />
   </component>
@@ -143,13 +142,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>50</line>
+          <line>54</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="43" containingFunctionPresentation="method 'RestartLevel'">
             <startOffsets>
-              <option value="1281" />
+              <option value="1472" />
             </startOffsets>
             <endOffsets>
-              <option value="1315" />
+              <option value="1506" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
@@ -169,13 +168,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>55</line>
+          <line>63</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="55" containingFunctionPresentation="method 'RestartLevel'">
             <startOffsets>
-              <option value="1368" />
+              <option value="1682" />
             </startOffsets>
             <endOffsets>
-              <option value="1425" />
+              <option value="1739" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="20" />
