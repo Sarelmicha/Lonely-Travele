@@ -54,8 +54,12 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         public override void Reset(bool shouldFullReset)
         {
             m_MovementTweener.StopTween();
-            m_Collider2D.enabled = false;
             transform.position = m_InitialPosition;
+
+            if (shouldFullReset)
+            {
+                m_Collider2D.enabled = false;
+            }
         }
     }
 }

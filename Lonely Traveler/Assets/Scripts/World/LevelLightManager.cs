@@ -47,9 +47,6 @@ public class LevelLightManager : MonoBehaviour
     /// <param name="shouldFullReset">A flag that indicate whether should we full reset the strategy</param>
     public void Reset(bool shouldFullReset)
     {
-        if (shouldFullReset)
-        {
-            m_LevelGlobalLight.intensity = m_MinimumLightLevel;
-        }
+        m_LevelGlobalLight.intensity = m_MinimumLightLevel;
     }
 }
