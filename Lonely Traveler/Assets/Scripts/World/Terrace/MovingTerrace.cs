@@ -10,7 +10,7 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private float m_Speed;
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
         private IMovementTweener m_MovementTweener;
-        private Vector2 m_InitialPosition;
+        private Vector3 m_InitialPosition;
         
         private void Awake()
         {
