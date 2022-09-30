@@ -59,16 +59,21 @@ namespace HappyFlow.LonelyTraveler.Player
         public void Die()
         {
             //Do some die animation
-            m_LevelManager.StartRestartLevel();
+            m_LevelManager.StartRestartLevel(false);
         }
 
         /// <summary>
         /// Reset the player position in the initial position and set it velocity to zero
         /// </summary>
-        public void Reset()
+        public void Reset(bool shouldFullReset)
         {
             m_PlayerControllerLogic.Reset();
             //Do some awake animation
+
+            if (shouldFullReset)
+            {
+                m_CanJump = false;
+            }
         }
 
         /// <summary>
@@ -129,7 +134,6 @@ namespace HappyFlow.LonelyTraveler.Player
         private void OnLevelStarted()
         {
             IlluminateSpotlight(EnableJump);
-          
         }
 
         private void EnableJump()
