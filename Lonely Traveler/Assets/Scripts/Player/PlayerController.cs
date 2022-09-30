@@ -22,12 +22,14 @@ namespace HappyFlow.LonelyTraveler.Player
         private PlayerSpotlight m_PlayerSpotlight;
         private LevelManager m_LevelManager;
         private bool m_CanJump;
+        private bool m_IsAlive;
 
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
             m_PlayerSpotlight = GetComponentInChildren<PlayerSpotlight>();
             m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Thrust, transform.position, m_PlayerSpotlight);
+            m_IsAlive = true;
             
             var go = GameObject.FindGameObjectWithTag("LevelManager");
 
@@ -58,6 +60,12 @@ namespace HappyFlow.LonelyTraveler.Player
         /// </summary>
         public void Die()
         {
+            if (!m_IsAlive)
+            {
+                return;
+            }
+
+            m_IsAlive = false;
             //Do some die animation
             m_LevelManager.StartRestartLevel(false);
         }
@@ -65,9 +73,10 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Reset the player position in the initial position and set it velocity to zero
         /// </summary>
-        public void Reset(bool shouldFullReset)
+        private void Reset(bool shouldFullReset)
         {
             m_PlayerControllerLogic.Reset();
+            m_IsAlive = true;
             //Do some awake animation
 
             if (shouldFullReset)
