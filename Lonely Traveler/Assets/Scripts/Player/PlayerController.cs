@@ -9,11 +9,6 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
-        /// <summary>
-        /// Invoked anytime the player died.
-        /// </summary>
-        public Action OnPlayerDied;
-        
         [SerializeField] private float m_Thrust;
         [SerializeField] private Slingshot m_Slingshot;
         
