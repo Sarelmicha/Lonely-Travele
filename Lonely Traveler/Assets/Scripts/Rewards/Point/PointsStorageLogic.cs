@@ -18,7 +18,7 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
         /// </summary>
         public void OnCollect()
         {
-            if (m_CurrentPoint < 0 || m_CurrentPoint >= m_PointsDisplays.Count - 1 ||
+            if (m_CurrentPoint < 0 || m_CurrentPoint > m_PointsDisplays.Count - 1 ||
                 m_PointsDisplays[m_CurrentPoint].IsFull)
             {
                 return;
@@ -26,6 +26,20 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
 
             m_PointsDisplays[m_CurrentPoint].Fill();
             m_CurrentPoint++;
+        }
+
+        /// <summary>
+        /// Reset the points storage.
+        /// </summary>
+        /// <param name="shouldFullReset">A flag that indicate whether we should full reset</param>
+        public void Reset(bool shouldFullReset)
+        {
+            foreach (var displayPoint in m_PointsDisplays)
+            {
+                displayPoint.Reset(shouldFullReset);
+            }
+            
+            m_CurrentPoint = 0;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using HappyFlow.LonelyTraveler.Player;
 using HappyFlow.LonelyTraveler.Utils;
 using UnityEngine;
@@ -23,19 +24,30 @@ namespace HappyFlow.LonelyTraveler.World
 
         protected override void OnPlayerTriggerExit2D(PlayerController playerController)
         {
-            var targetPosition = new Vector3(transform.position.x, playerController.transform.position.y, transform.position.z);
-
+            Follow(playerController);
+        }
+        
+        private void Follow(Component target)
+        {
+            var targetPosition = new Vector3(transform.position.x, target.transform.position.y, transform.position.z);
+        
             if (targetPosition.y <= m_InitialPosition.y)
             {
                 targetPosition = m_InitialPosition;
             }
-
+        
             if (targetPosition.y >= m_UpperLimit.position.y)
             {
                 targetPosition = m_UpperLimit.position;
             }
-
+        
             m_MovementTweener.MoveTo(transform, targetPosition, m_FollowDuration);
+        }
+
+        protected override void Reset(bool shouldFullReset)
+        {
+            m_MovementTweener.StopTween();
+            transform.position = m_InitialPosition;
         }
     }
 }

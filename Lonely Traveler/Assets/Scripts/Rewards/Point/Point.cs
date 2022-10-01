@@ -14,7 +14,7 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
         public void Collect()
         {
             // Do some animation to show star was collected.
-            //m_PointsStorage.OnCollect();
+            m_PointsStorage.OnCollect();
             gameObject.SetActive(false);
         }
 

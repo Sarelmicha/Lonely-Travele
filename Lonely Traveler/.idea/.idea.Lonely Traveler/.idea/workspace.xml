@@ -60,21 +60,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.51617646",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.51617646&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.2.5f1\Editor\Unity.exe" />
@@ -94,10 +94,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7448">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19564">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7448" />
+      <option name="pid" value="19564" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -130,6 +130,7 @@
       <workItem from="1664256867622" duration="9449000" />
       <workItem from="1664389852601" duration="3315000" />
       <workItem from="1664541879419" duration="6848000" />
+      <workItem from="1664626763359" duration="7602000" />
     </task>
     <servers />
   </component>
@@ -210,82 +211,43 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="72" containingFunctionPresentation="lambda expression inside method 'ExposeLevel'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/UI/HUD/Points/PointDisplay.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\UI\HUD\Points\PointDisplay.cs" initialLine="19" containingFunctionPresentation="method 'Fill'">
             <startOffsets>
-              <option value="2126" />
+              <option value="457" />
             </startOffsets>
             <endOffsets>
-              <option value="2173" />
+              <option value="491" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>79</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="78" containingFunctionPresentation="method 'IlluminateLevel'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/UI/HUD/Points/PointDisplay.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\UI\HUD\Points\PointDisplay.cs" initialLine="20" containingFunctionPresentation="method 'Fill'">
             <startOffsets>
-              <option value="2266" />
+              <option value="501" />
             </startOffsets>
             <endOffsets>
-              <option value="2303" />
+              <option value="528" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>56</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="55" containingFunctionPresentation="method 'Start'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Rewards\Point\PointsStorageLogic.cs" initialLine="20" containingFunctionPresentation="method 'OnCollect'">
             <startOffsets>
-              <option value="1746" />
+              <option value="606" />
             </startOffsets>
             <endOffsets>
-              <option value="1760" />
+              <option value="735" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/TopDownStrategy.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="39" containingFunctionPresentation="method 'Expose'">
-            <startOffsets>
-              <option value="1433" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1823" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelLightManager.cs</url>
-          <line>34</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelLightManager.cs" initialLine="34" containingFunctionPresentation="method 'IlluminateLevel'">
-            <startOffsets>
-              <option value="1155" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1213" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/TopDownStrategy.cs</url>
-          <line>41</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="41" containingFunctionPresentation="lambda expression inside method 'Expose'">
-            <startOffsets>
-              <option value="1570" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1807" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PointDisplay : MonoBehaviour
 {
+   [SerializeField] private Animator m_Animator;
    private PointDisplayLogic m_PointDisplayLogic;
    public bool IsFull => m_PointDisplayLogic.IsFull;
 
@@ -17,5 +18,12 @@ public class PointDisplay : MonoBehaviour
    {
        // Do some fulling animation
          m_PointDisplayLogic.IsFull = true;
+         m_Animator.Play("Collect");
+   }
+   
+   public void Reset(bool shouldFullReset)
+   {
+      m_PointDisplayLogic.IsFull = false;
+      m_Animator.Play("Idle");
    }
 }
