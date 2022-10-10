@@ -13,6 +13,8 @@ namespace HappyFlow.LonelyTraveler.Player
         [SerializeField] private CircleCollider2D SlingshotHolder;
         [SerializeField] private Image m_Image;
 
+        public bool CanDragSlingshot { get; set; }
+
         /// <summary>
         /// Responsible for handling all the logic of the slingshot
         /// </summary>
@@ -31,6 +33,11 @@ namespace HappyFlow.LonelyTraveler.Player
      
         private void OnMouseDown()
         {
+            if (!CanDragSlingshot)
+            {
+                return;
+            }
+
             Appear();
             m_SlingshotLogic.OnMouseDown();
         }

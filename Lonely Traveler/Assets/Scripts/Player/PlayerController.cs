@@ -15,14 +15,16 @@ namespace HappyFlow.LonelyTraveler.Player
         private Rigidbody2D m_Rigidbody;
         private PlayerControllerLogic m_PlayerControllerLogic;
         private PlayerSpotlight m_PlayerSpotlight;
+        private PlayerCollider m_PlayerCollider;
         private LevelManager m_LevelManager;
-        private bool m_CanJump;
         private bool m_IsAlive;
-
+        private bool m_IsLevelStarted;
+        
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
             m_PlayerSpotlight = GetComponentInChildren<PlayerSpotlight>();
+            m_PlayerCollider = GetComponentInChildren<PlayerCollider>();
             m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Thrust, transform.position, m_PlayerSpotlight);
             m_IsAlive = true;
             
@@ -40,6 +42,8 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart += Reset;
             m_LevelManager.OnLevelStarted += OnLevelStarted;
+            m_PlayerCollider.OnPlayerGrounded += EnableJump;
+            m_PlayerCollider.OnPlayerUngrounded += DisableJump;
         }
 
         private void OnDestroy()
@@ -48,6 +52,8 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart -= Reset;
             m_LevelManager.OnLevelStarted -= OnLevelStarted;
+            m_PlayerCollider.OnPlayerGrounded -= EnableJump;
+            m_PlayerCollider.OnPlayerUngrounded -= DisableJump;
         }
         
         /// <summary>
@@ -76,7 +82,8 @@ namespace HappyFlow.LonelyTraveler.Player
 
             if (shouldFullReset)
             {
-                m_CanJump = false;
+                m_IsLevelStarted = false;
+                m_Slingshot.CanDragSlingshot = false;
             }
         }
 
@@ -127,27 +134,31 @@ namespace HappyFlow.LonelyTraveler.Player
         
         private void Jump(Vector3 position)
         {
-            if (!m_CanJump)
-            {
-                return;
-            }
-
             m_PlayerControllerLogic.Jump(position);
         }
 
         private void OnLevelStarted()
         {
-            IlluminateSpotlight(EnableJump);
+            IlluminateSpotlight(() =>
+            {
+                m_IsLevelStarted = true;
+                EnableJump();
+            });
         }
 
         private void EnableJump()
         {
-            m_CanJump = true;
+            if (!m_IsLevelStarted)
+            {
+                return;
+            }
+
+            m_Slingshot.CanDragSlingshot = true;
         }
 
         private void DisableJump()
         {
-            m_CanJump = false;
+            m_Slingshot.CanDragSlingshot = false;
         }
     }
 }
