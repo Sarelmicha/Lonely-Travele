@@ -29,7 +29,7 @@ namespace HappyFlow.LonelyTraveler.World
         
         private void Follow(Component target)
         {
-            var targetPosition = new Vector3(transform.position.x, target.transform.position.y, transform.position.z);
+            var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
         
             if (targetPosition.y <= m_InitialPosition.y)
             {
