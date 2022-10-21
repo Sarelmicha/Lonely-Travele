@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using HappyFlow.LonelyTraveler.World.LevelExposure;
 using UnityEngine;
 
 /// <summary>
@@ -10,7 +8,6 @@ using UnityEngine;
 /// </summary>
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private LevelExposureStrategy m_LevelExposureStrategy;
     [SerializeField] private LevelLightManager m_LevelLightManager;
     
     public event Action<bool> OnLevelShouldRestart;
@@ -36,15 +33,8 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         OnLevelShouldRestart?.Invoke(m_ShouldExecuteFullRestart);
-        m_LevelExposureStrategy.Reset(m_ShouldExecuteFullRestart);
-        m_LevelLightManager.Reset(m_ShouldExecuteFullRestart);
-
+        StartCoroutine(m_LevelLightManager.DarkenLevel(true));
         StopRunningRoutines();
-
-        if (m_ShouldExecuteFullRestart)
-        {
-            ExposeLevel();
-        }
     }
     private void Awake()
     {
@@ -54,7 +44,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        ExposeLevel();
+        StartLevel();
     }
 
     private void StopRunningRoutines()
@@ -66,20 +56,12 @@ public class LevelManager : MonoBehaviour
 
         m_RunningCoroutines.Clear();
     }
-
-    private void ExposeLevel()
-    {
-        IlluminateLevel(() =>
-        {
-            m_LevelExposureStrategy.Expose(OnLevelExposed);
-        });
-    }
-
-    private void IlluminateLevel(Action onComplete = null)
+    
+    private void IlluminateLevel(bool immediately = false, Action onComplete = null)
     {
         Coroutine illuminateCoroutine = null;
         
-        illuminateCoroutine = StartCoroutine(m_LevelLightManager.IlluminateLevel(() =>
+        illuminateCoroutine = StartCoroutine(m_LevelLightManager.IlluminateLevel(immediately ,() =>
         {
             if (m_RunningCoroutines.Contains(illuminateCoroutine))
             {
@@ -92,24 +74,23 @@ public class LevelManager : MonoBehaviour
         m_RunningCoroutines.Add(illuminateCoroutine);
     }
 
-    private void DarkenLevel(Action onComplete = null)
+    private void DarkenLevel(bool immediately = false, Action onComplete = null)
     {
-        Coroutine illuminateCoroutine = null;
+        Coroutine darkenCoroutine = null;
         
-        illuminateCoroutine = StartCoroutine(m_LevelLightManager.DarkenLevel(() =>
+        darkenCoroutine = StartCoroutine(m_LevelLightManager.DarkenLevel(immediately, () =>
         {
-            if (m_RunningCoroutines.Contains(illuminateCoroutine))
+            if (m_RunningCoroutines.Contains(darkenCoroutine))
             {
-                m_RunningCoroutines.Remove(illuminateCoroutine); 
+                m_RunningCoroutines.Remove(darkenCoroutine); 
             }
             onComplete?.Invoke();
         }));
         
-        m_RunningCoroutines.Add(illuminateCoroutine);
+        m_RunningCoroutines.Add(darkenCoroutine);
     }
-    private void OnLevelExposed()
+    private void StartLevel()
     {
-        DarkenLevel();
-        OnLevelStarted?.Invoke();
+        DarkenLevel(true, OnLevelStarted);
     }
 }

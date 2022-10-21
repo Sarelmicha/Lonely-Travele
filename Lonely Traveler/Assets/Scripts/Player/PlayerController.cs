@@ -34,9 +34,16 @@ namespace HappyFlow.LonelyTraveler.Player
             {
                 m_LevelManager = go.GetComponent<LevelManager>();
             }
+
+            SubscribeEvents();
         }
         
-        private void Start()
+        private void OnDestroy()
+        {
+            UnsubscribeEvents();
+        }
+
+        private void SubscribeEvents()
         {
             m_Slingshot.SubscribeOnTargetReleasedEvent(Jump);
             m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(Die);
@@ -46,7 +53,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerCollider.OnPlayerUngrounded += DisableJump;
         }
 
-        private void OnDestroy()
+        private void UnsubscribeEvents()
         {
             m_Slingshot.UnsubscribeOnTargetReleasedEvent(Jump);
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
@@ -55,7 +62,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerCollider.OnPlayerGrounded -= EnableJump;
             m_PlayerCollider.OnPlayerUngrounded -= DisableJump;
         }
-        
+
         /// <summary>
         /// Start die process of the player
         /// </summary>

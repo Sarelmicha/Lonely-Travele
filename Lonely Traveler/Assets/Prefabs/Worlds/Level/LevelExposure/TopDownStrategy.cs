@@ -23,13 +23,13 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         {
             m_InitialPosition = transform.position;
             m_MovementTweener = new DoTweenTweener();
-            m_Collider2D = GetComponent<Collider2D>();
+    //        m_Collider2D = GetComponent<Collider2D>();
         }
 
         private void Start()
         {
             // disable collider before starting expose the top done strategy
-            m_Collider2D.enabled = false;
+//            m_Collider2D.enabled = false;
         }
         
         /// <summary>

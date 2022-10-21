@@ -14,9 +14,17 @@ public class LevelLightManager : MonoBehaviour
     /// <summary>
     /// Darken the light level completely. 
     /// </summary>
+    /// <param name="immediately">A flag that indicate whether the level should darken immediately or not.</param>
     /// <param name="onComplete"Invoke when the level illumination is finished</param>
-    public IEnumerator DarkenLevel(Action onComplete = null)
+    public IEnumerator DarkenLevel(bool immediately = false, Action onComplete = null)
     {
+        if (immediately)
+        {
+            m_LevelGlobalLight.intensity = m_MinimumLightLevel;
+            onComplete?.Invoke();
+            yield break;
+        }
+
         while (m_LevelGlobalLight.intensity > m_MinimumLightLevel)
         {
             m_LevelGlobalLight.intensity -= m_LightReducerRate;
@@ -29,9 +37,17 @@ public class LevelLightManager : MonoBehaviour
     /// <summary>
     /// Slowly illuminate the light level completely. 
     /// </summary>
+    /// <param name="immediately">A flag that indicate whether the level should illuminate immediately or not.</param>
     /// <param name="onComplete"Invoke when the level illumination is finished</param>
-    public IEnumerator IlluminateLevel(Action onComplete = null)
+    public IEnumerator IlluminateLevel(bool immediately = false, Action onComplete = null)
     {
+        if (immediately)
+        {
+            m_LevelGlobalLight.intensity = m_MaximumLightLevel;
+            onComplete?.Invoke();
+            yield break;
+        }
+
         while (m_LevelGlobalLight.intensity < m_MaximumLightLevel)
         {
             m_LevelGlobalLight.intensity += m_LightIncreaserRate;
@@ -39,14 +55,5 @@ public class LevelLightManager : MonoBehaviour
         }
         
         onComplete?.Invoke();
-    }
-
-    /// <summary>
-    /// Reset the level light. 
-    /// </summary>
-    /// <param name="shouldFullReset">A flag that indicate whether should we full reset the strategy</param>
-    public void Reset(bool shouldFullReset)
-    {
-        m_LevelGlobalLight.intensity = m_MinimumLightLevel;
     }
 }
