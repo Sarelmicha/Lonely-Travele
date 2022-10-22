@@ -1,7 +1,3 @@
-using System;
-using HappyFlow.LonelyTraveler.Player;
-using HappyFlow.LonelyTraveler.World;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.World.Enemies

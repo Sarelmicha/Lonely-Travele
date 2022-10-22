@@ -9,14 +9,9 @@ namespace HappyFlow.LonelyTraveler.Player
     {
         [SerializeField] private float m_InitialSpotlightRadius;
         [SerializeField] private float m_IluminateSpotlightRate;
-        private Light2D m_Spotlight;
+        [SerializeField] private Light2D m_Spotlight;
+        private PlayerSpotlightLogic PlayerSpotlightLogic => m_PlayerSpotlightLogic ??= new PlayerSpotlightLogic(m_Spotlight, m_InitialSpotlightRadius);
         private PlayerSpotlightLogic m_PlayerSpotlightLogic;
-
-        private void Awake()
-        {
-            m_Spotlight = GetComponent<Light2D>();
-            m_PlayerSpotlightLogic = new PlayerSpotlightLogic(m_Spotlight, m_InitialSpotlightRadius);
-        }
         
         /// <summary>
         /// Increasing the light radius of the player
@@ -24,7 +19,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="value">The value to increase from the light radius</param>
         public void IncreaseLight(float value)
         {
-            m_PlayerSpotlightLogic.IncreaseLight(value);
+            PlayerSpotlightLogic.IncreaseLight(value);
         }
 
         /// <summary>
@@ -33,7 +28,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="lightToReduce">The value to reduce from the light radius</param>
         public void ReduceLight(float value)
         {
-           m_PlayerSpotlightLogic.ReduceLight(value);
+           PlayerSpotlightLogic.ReduceLight(value);
         }
 
         /// <summary>
@@ -41,17 +36,17 @@ namespace HappyFlow.LonelyTraveler.Player
         /// </summary>
         public void Reset()
         {
-            m_PlayerSpotlightLogic.Reset();
+            PlayerSpotlightLogic.Reset();
         }
 
         public void SubscribeOnLightReachedZeroEvent(Action action)
         {
-            m_PlayerSpotlightLogic.OnLightReachedZero += action;
+            PlayerSpotlightLogic.OnLightReachedZero += action;
         }
 
         public void UnsubscribeOnLightReachedZeroEvent(Action action)
         {
-            m_PlayerSpotlightLogic.OnLightReachedZero -= action;
+            PlayerSpotlightLogic.OnLightReachedZero -= action;
         }
 
         /// <summary>
@@ -62,7 +57,7 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             while (m_Spotlight.pointLightOuterRadius < m_InitialSpotlightRadius)
             {
-                m_PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate);
+                PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate);
                 yield return null;
             }
             

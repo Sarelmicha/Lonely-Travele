@@ -18,17 +18,18 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Responsible for handling all the logic of the slingshot
         /// </summary>
+        private SlingshotLogic SlingshotLogic => m_SlingshotLogic ??= new SlingshotLogic(transform, SlingshotHolder.transform, SlingshotHolder.radius);
+
         private SlingshotLogic m_SlingshotLogic;
 
         private void Awake()
         {
-            m_SlingshotLogic = new SlingshotLogic(transform, SlingshotHolder.transform, SlingshotHolder.radius);
             SlingshotHolder.enabled = false;
         }
 
         private void Update()
         {          
-            m_SlingshotLogic.TryUpdatePosition();         
+            SlingshotLogic.TryUpdatePosition();         
         }
      
         private void OnMouseDown()
@@ -39,13 +40,13 @@ namespace HappyFlow.LonelyTraveler.Player
             }
 
             Appear();
-            m_SlingshotLogic.OnMouseDown();
+            SlingshotLogic.OnMouseDown();
         }
 
         private void OnMouseUp()
         {
             Disappear();
-            m_SlingshotLogic.OnMouseUp();
+            SlingshotLogic.OnMouseUp();
         }
 
         private void Appear()
@@ -64,7 +65,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="action">The action to invoke when the OnTargetReleased event has invoke</param>
         public void SubscribeOnTargetReleasedEvent(Action<Vector3> action)
         {
-            m_SlingshotLogic.OnTargetReleased += action;
+            SlingshotLogic.OnTargetReleased += action;
         }
         
         /// <summary>
@@ -73,7 +74,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="action">The action to remove from invoking when the OnTargetReleased event has invoke</param>
         public void UnsubscribeOnTargetReleasedEvent(Action<Vector3> action)
         {
-            m_SlingshotLogic.OnTargetReleased -= action;
+            SlingshotLogic.OnTargetReleased -= action;
         }
     }
 }

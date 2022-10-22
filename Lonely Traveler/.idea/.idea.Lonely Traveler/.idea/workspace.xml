@@ -95,10 +95,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14684">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16244">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14684" />
+      <option name="pid" value="16244" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -134,6 +134,7 @@
       <workItem from="1664626763359" duration="9065000" />
       <workItem from="1665397231378" duration="8112000" />
       <workItem from="1666358623759" duration="1278000" />
+      <workItem from="1666423533196" duration="5222000" />
     </task>
     <servers />
   </component>
@@ -176,29 +177,68 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/Slingshot.cs</url>
-          <line>46</line>
+          <line>47</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\Slingshot.cs" initialLine="46" containingFunctionPresentation="method 'OnMouseUp'">
             <startOffsets>
-              <option value="1225" />
+              <option value="1261" />
             </startOffsets>
             <endOffsets>
-              <option value="1237" />
+              <option value="1273" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/Slingshot.cs</url>
-          <line>35</line>
+          <line>36</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\Slingshot.cs" initialLine="35" containingFunctionPresentation="method 'OnMouseDown'">
             <startOffsets>
-              <option value="1017" />
+              <option value="1055" />
             </startOffsets>
             <endOffsets>
-              <option value="1039" />
+              <option value="1077" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/Slingshot.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\Slingshot.cs" initialLine="66" containingFunctionPresentation="method 'SubscribeOnTargetReleasedEvent'">
+            <startOffsets>
+              <option value="1802" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1844" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerController.cs" initialLine="48" containingFunctionPresentation="method 'SubscribeEvents'">
+            <startOffsets>
+              <option value="1601" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1657" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
+          <line>47</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerController.cs" initialLine="47" containingFunctionPresentation="method 'SubscribeEvents'">
+            <startOffsets>
+              <option value="1539" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1588" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         OnLevelShouldRestart?.Invoke(m_ShouldExecuteFullRestart);
-        StartCoroutine(m_LevelLightManager.DarkenLevel(true));
+        StartLevel();
         StopRunningRoutines();
     }
     private void Awake()
