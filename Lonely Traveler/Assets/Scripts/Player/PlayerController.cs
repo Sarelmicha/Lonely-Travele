@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Rigidbody2D = UnityEngine.Rigidbody2D;
 
@@ -51,6 +52,8 @@ namespace HappyFlow.LonelyTraveler.Player
             m_LevelManager.OnLevelStarted += OnLevelStarted;
             m_PlayerCollider.OnPlayerGrounded += EnableJump;
             m_PlayerCollider.OnPlayerUngrounded += DisableJump;
+            m_Slingshot.GetComponent<TrajectoryPrediction>()._mass = m_Rigidbody.mass;
+            m_Slingshot.GetComponent<TrajectoryPrediction>()._force = m_Thrust;
         }
 
         private void UnsubscribeEvents()
@@ -143,7 +146,7 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             m_PlayerControllerLogic.Jump(position);
         }
-
+        
         private void OnLevelStarted()
         {
             IlluminateSpotlight(() =>

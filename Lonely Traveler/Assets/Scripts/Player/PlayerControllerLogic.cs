@@ -29,10 +29,10 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Make the player jump in a certain direction and a <see cref="m_Thrust"/> force.
         /// </summary>
-        /// <param name="vector">The direction to jump</param>
-        public void Jump(Vector3 vector)
+        /// <param name="direction">The direction to jump</param>
+        public void Jump(Vector3 direction)
         {
-            m_PlayerRigidbody.AddForce(vector * m_Thrust);
+            m_PlayerRigidbody.AddForce(direction * m_Thrust);
         }
         
         /// <summary>

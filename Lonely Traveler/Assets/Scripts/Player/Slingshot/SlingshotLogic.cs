@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace HappyFlow.LonelyTraveler.Player
 {
@@ -13,12 +14,13 @@ namespace HappyFlow.LonelyTraveler.Player
         private readonly float m_Radius;
 
         private Vector3 m_MousePosition;
-        private bool m_IsDragging;
-        
+        public bool IsDragging { get; private set; }
+
         /// <summary>
         /// Invoke when the player release the target on a certain location. 
         /// </summary>
         public event Action<Vector3> OnTargetReleased;
+        public event Action<Vector3> OnTargetDragging;
 
         public SlingshotLogic(Transform slingshotTransform, Transform slingshotHolderTransform, float radius)
         {
@@ -26,10 +28,10 @@ namespace HappyFlow.LonelyTraveler.Player
             m_SlingshotHolderTransform = slingshotHolderTransform;
             m_Radius = radius;
         }
-
+        
         public void TryUpdatePosition()
         {
-            if (m_IsDragging)
+            if (IsDragging)
             {
                 UpdatePosition();
             }
@@ -60,7 +62,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// </summary>
         public void OnMouseUp()
         {
-            m_IsDragging = false;
+            IsDragging = false;
             OnTargetReleased?.Invoke(m_SlingshotHolderTransform.position - m_SlingshotTransform.position);
             SetPosition(m_SlingshotHolderTransform.position);
         }
@@ -70,7 +72,12 @@ namespace HappyFlow.LonelyTraveler.Player
         /// </summary>
         public void OnMouseDown()
         {
-            m_IsDragging = true;
+            IsDragging = true;
+        }
+
+        public void OnMouseDrag()
+        {
+            OnTargetDragging?.Invoke(m_SlingshotHolderTransform.position - m_SlingshotTransform.position);
         }
     }
 }

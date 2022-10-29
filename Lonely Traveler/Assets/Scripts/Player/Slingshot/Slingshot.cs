@@ -27,9 +27,9 @@ namespace HappyFlow.LonelyTraveler.Player
             SlingshotHolder.enabled = false;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {          
-            SlingshotLogic.TryUpdatePosition();         
+            SlingshotLogic.TryUpdatePosition();
         }
      
         private void OnMouseDown()
@@ -48,6 +48,12 @@ namespace HappyFlow.LonelyTraveler.Player
             Disappear();
             SlingshotLogic.OnMouseUp();
         }
+        
+        void OnMouseDrag()
+        {
+            m_SlingshotLogic.OnMouseDrag();
+        }
+        
 
         private void Appear()
         {
@@ -75,6 +81,24 @@ namespace HappyFlow.LonelyTraveler.Player
         public void UnsubscribeOnTargetReleasedEvent(Action<Vector3> action)
         {
             SlingshotLogic.OnTargetReleased -= action;
+        }
+        
+        /// <summary>
+        /// Subscribe to the OnTargetDragging event
+        /// </summary>
+        /// <param name="action">The action to invoke when the OnTargetDragging event has invoke</param>
+        public void SubscribeOnTargetDraggingEvent(Action<Vector3> action)
+        {
+            SlingshotLogic.OnTargetDragging += action;
+        }
+        
+        /// <summary>
+        /// Unsubscribe to the OnTargetDragging event
+        /// </summary>
+        /// <param name="action">The action to remove from invoking when the OnTargetDragging event has invoke</param>
+        public void UnsubscribeOnTargetDraggingEvent(Action<Vector3> action)
+        {
+            SlingshotLogic.OnTargetDragging -= action;
         }
     }
 }
