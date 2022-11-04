@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using HappyFlow.LonelyTraveler.World.LevelExposure;
 using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.World

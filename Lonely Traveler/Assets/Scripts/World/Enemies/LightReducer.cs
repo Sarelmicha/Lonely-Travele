@@ -17,7 +17,7 @@ namespace HappyFlow.LonelyTraveler.World.Enemies
 
         private void ReduceLight()
         {
-            m_PlayerController.ReduceLight(m_LightToReduce);
+            m_PlayerController.ReduceLight(m_LightToReduce * Time.deltaTime);
         }
     }
 }
