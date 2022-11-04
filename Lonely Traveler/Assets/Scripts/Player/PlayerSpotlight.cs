@@ -57,7 +57,7 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             while (m_Spotlight.pointLightOuterRadius < m_InitialSpotlightRadius)
             {
-                PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate);
+                PlayerSpotlightLogic.IncreaseLight(m_IluminateSpotlightRate * Time.deltaTime);
                 yield return null;
             }
             

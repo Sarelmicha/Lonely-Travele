@@ -10,7 +10,7 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float m_Thrust;
+        [SerializeField] private float m_Force;
         [SerializeField] private Slingshot m_Slingshot;
         
         private Rigidbody2D m_Rigidbody;
@@ -20,13 +20,15 @@ namespace HappyFlow.LonelyTraveler.Player
         private LevelManager m_LevelManager;
         private bool m_IsAlive;
         private bool m_IsLevelStarted;
+        private TrajectoryPrediction m_TrajectoryPrediction;
         
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
+            m_TrajectoryPrediction = m_Slingshot.GetComponent<TrajectoryPrediction>();
             m_PlayerSpotlight = GetComponentInChildren<PlayerSpotlight>();
             m_PlayerCollider = GetComponentInChildren<PlayerCollider>();
-            m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Thrust, transform.position, m_PlayerSpotlight);
+            m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Force, transform.position, m_PlayerSpotlight);
             m_IsAlive = true;
             
             var go = GameObject.FindGameObjectWithTag("LevelManager");
@@ -52,8 +54,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_LevelManager.OnLevelStarted += OnLevelStarted;
             m_PlayerCollider.OnPlayerGrounded += EnableJump;
             m_PlayerCollider.OnPlayerUngrounded += DisableJump;
-            m_Slingshot.GetComponent<TrajectoryPrediction>()._mass = m_Rigidbody.mass;
-            m_Slingshot.GetComponent<TrajectoryPrediction>()._force = m_Thrust;
+            m_TrajectoryPrediction.Initialize(m_Force);
         }
 
         private void UnsubscribeEvents()

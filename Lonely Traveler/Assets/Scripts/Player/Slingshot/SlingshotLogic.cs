@@ -63,7 +63,9 @@ namespace HappyFlow.LonelyTraveler.Player
         public void OnMouseUp()
         {
             IsDragging = false;
-            OnTargetReleased?.Invoke(m_SlingshotHolderTransform.position - m_SlingshotTransform.position);
+            var direction = GetDirection();
+            Debug.Log("OnMouseUp " + direction);
+            OnTargetReleased?.Invoke(GetDirection());
             SetPosition(m_SlingshotHolderTransform.position);
         }
         
@@ -77,7 +79,17 @@ namespace HappyFlow.LonelyTraveler.Player
 
         public void OnMouseDrag()
         {
-            OnTargetDragging?.Invoke(m_SlingshotHolderTransform.position - m_SlingshotTransform.position);
+            var direction = GetDirection();
+            Debug.Log("OnMouseDrag " + direction);
+            OnTargetDragging?.Invoke((GetDirection()));
+        }
+
+        private Vector3 GetDirection()
+        {
+            var d = m_SlingshotHolderTransform.position - m_SlingshotTransform.position;
+            Debug.Log("direction = " + d);
+            Debug.Log("normalized direction " + d.normalized);
+            return m_SlingshotHolderTransform.position - m_SlingshotTransform.position;
         }
     }
 }

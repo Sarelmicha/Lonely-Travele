@@ -1,102 +1,103 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using HappyFlow.LonelyTraveler.Player;
 using UnityEngine;
 
-//CANNON TRAJECTORY PROJECTION METHOD
-
-//Position(At Specified Time) = Initial Positions of X and Y multiplied by Speed, then subtract Gravity Factor from Y
-//f(t) = (x0 + x*t, y0 + y*t - 9.81t²/2)
-//In essence, move X and Y at a constant speed, subtract Gravity from Y
-
-//Variables to decide:
-    //Force, Mass, Origin & Direction in which to launch objects
-    //Simulation Length, Step Measurement Interval
-//Variables to calculate: 
-    //Max Steps, Velocity, and Position at each Step :)
-
-//Currently does not account for 3-D, Drag, Gravity Scale, Bounces, or Ground Velocity
-
+/// <summary>
+/// This class responsible for handling the trajectory prediction of the slingshot and the player
+/// </summary>
 public class TrajectoryPrediction : MonoBehaviour
 {
     [SerializeField] private Slingshot m_Slingshot;
-    
-    private LineRenderer _lr; //Line to predict trajectory
+    [SerializeField] private float _collisionCheckRadius = 1f; 
+    [SerializeField] private float m_MaxDuration = 50; //INPUT amount of total time for simulation
+    [SerializeField] private Rigidbody2D m_Target;
 
-    public float _force { get; set; } //Force, can be assigned in Unity Inspector
-    public float _mass; //Automatic mass of an object is 1, can be reassigned
-    private float _vel; //Initial Velocity, calculated via V = Force / Mass * fixedTime (0.02)
-    private float _gravity;
-    private float _collisionCheckRadius = 100f; //Collision radius of last point on SimulationArc, to communicate with it when to stop. Currently using IgnoreRaycast Layer on some objects, suboptimal
-    private float maxDuration = 10f; //INPUT amount of total time for simulation
-    private float timeStepInterval = 0.1f; //INPUT amount of time between each position check
-    private int maxSteps;//Calculates amount of steps simulation will iterate for
+    
+    private LineRenderer m_LineRenderer; //Line to predict trajectory
+
+    private float m_Force;
+
+    private const float m_TimeStepInterval = 0.1f; //INPUT amount of time between each position check
+    private int m_MaxSteps;//Calculates amount of steps simulation will iterate for
     private List<Vector2> lineRendererPoints;
 
+    /// <summary>
+    /// Initialize the <see cref="TrajectoryPrediction"/> component.
+    /// </summary>
+    /// <param name="force">The force with which the player is thrown</param>
+    public void Initialize(float force)
+    {
+        m_Force = force;
+    }
+    
     private void Awake()
     {
         m_Slingshot.SubscribeOnTargetDraggingEvent(DrawTrajectory);
         m_Slingshot.SubscribeOnTargetReleasedEvent(CleanTrajectoryPrediction);
-        maxSteps = (int)(maxDuration / timeStepInterval);
-        lineRendererPoints = new List<Vector2>();
-        _gravity = Physics2D.gravity.y;
+        m_MaxSteps = (int)(m_MaxDuration / m_TimeStepInterval);
     }
-
+    
     private void OnDestroy()
     {
         m_Slingshot.UnsubscribeOnTargetDraggingEvent(DrawTrajectory);
         m_Slingshot.UnsubscribeOnTargetReleasedEvent(CleanTrajectoryPrediction);
     }
 
-    void Start()
+    private void Start()
     {
-        _lr = GetComponent<LineRenderer>();
+        m_LineRenderer = GetComponent<LineRenderer>();
     }
     
-    void DrawTrajectory(Vector3 direction)
+    private void DrawTrajectory(Vector3 direction)
     {
-        var a = SimulateArc(direction);
-        _lr.positionCount = a.Count;
+        var trajectory = SimulateArc(direction * m_Force, m_MaxSteps);
+        m_LineRenderer.positionCount = trajectory.Length;
         
-        for (var i = 0; i < _lr.positionCount; i++)
+        for (var i = 0; i < m_LineRenderer.positionCount; i++)
         {
-            _lr.SetPosition(i, a[i]); //Add each Calculated Step to a LineRenderer to display a Trajectory. Look inside LineRenderer in Unity to see exact points and amount of them
+            m_LineRenderer.SetPosition(i, trajectory[i]); //Add each Calculated Step to a LineRenderer to display a Trajectory. Look inside LineRenderer in Unity to see exact points and amount of them
         }
     }
 
     private void CleanTrajectoryPrediction(Vector3 direction)
     {
-        _lr.positionCount = 0;
+        m_LineRenderer.positionCount = 0;
     }
 
-    private List<Vector2> SimulateArc(Vector3 direction) //A method happening via this List
+    private Vector2[] SimulateArc(Vector2 velocity, int steps)
     {
-        lineRendererPoints.Clear(); //Reset LineRenderer List for new calculation
-        
-        Vector3 launchPosition = transform.position + direction; //INPUT launch origin (Important to make sure RayCast is ignoring some layers (easiest to use default Layer 2))
-        
-        _vel = _force / _mass * Time.fixedDeltaTime; //Initial Velocity, or Velocity Modifier, with which to calculate Vector Velocity
+        Vector2[] results = new Vector2[steps];
 
-        for (var i = 0; i < maxSteps; ++i)
+        float timeStep = Time.fixedDeltaTime / Physics2D.velocityIterations;
+        Vector2 gravityAccel = Physics2D.gravity * m_Target.gravityScale * timeStep * timeStep;
+
+        float drag = 1f - timeStep * m_Target.drag;
+        Vector2 moveStep = velocity * timeStep;
+        Vector2 position = m_Target.transform.position;
+
+        for (int i = 0; i < steps; i++)
         {
-            Vector2 calculatedPosition = launchPosition + direction * _vel * i * timeStepInterval; //Move both X and Y at a constant speed per Interval
-            calculatedPosition.y += _gravity / 2 * Mathf.Pow(i * timeStepInterval, 2); //Subtract Gravity from Y
-
-            lineRendererPoints.Add(calculatedPosition); //Add this to the next entry on the list
-
-            // if (CheckForCollision(calculatedPosition)) //if you hit something, stop adding positions
-            // {
-            //     break; //stop adding positions
-            // }
+            moveStep = CalculateStep(moveStep, gravityAccel, drag, ref position);
+            results[i] = position;
         }
-        return lineRendererPoints;
+
+        return results;
     }
+
+    private Vector2 CalculateStep(Vector2 moveStep, Vector2 gravityAccel, float drag, ref Vector2 position)
+    {
+        moveStep += gravityAccel;
+        moveStep *= drag;
+        position += moveStep;
+        return moveStep;
+    }
+
 
     private bool CheckForCollision(Vector2 position)
     {   
-        Collider2D[] hits = Physics2D.OverlapCircleAll(position, _collisionCheckRadius); //Measure collision via a small circle at the latest position, dont continue simulating Arc if hit
-        if (hits.Length > 0) //Return true if something is hit, stopping Arc simulation
+        Collider2D hits = Physics2D.OverlapCircle(position, _collisionCheckRadius); //Measure collision via a small circle at the latest position, dont continue simulating Arc if hit
+        
+        if (hits != null) //Return true if something is hit, stopping Arc simulation
         {   
             return true;
         }

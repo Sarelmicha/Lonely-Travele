@@ -100,10 +100,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7392">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7392" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -141,6 +141,10 @@
       <workItem from="1666358623759" duration="1278000" />
       <workItem from="1666423533196" duration="5222000" />
       <workItem from="1667056319987" duration="11514000" />
+      <workItem from="1667071806278" duration="3347000" />
+      <workItem from="1667322789541" duration="3934000" />
+      <workItem from="1667410937546" duration="12837000" />
+      <workItem from="1667499499565" duration="9692000" />
     </task>
     <servers />
   </component>
@@ -151,50 +155,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/Slingshot.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\Slingshot.cs" initialLine="46" containingFunctionPresentation="method 'OnMouseUp'">
-            <startOffsets>
-              <option value="1257" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1269" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/Slingshot.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\Slingshot.cs" initialLine="35" containingFunctionPresentation="method 'OnMouseDown'">
-            <startOffsets>
-              <option value="1051" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1073" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/Slingshot/TrajectoryPrediction.cs</url>
-          <line>92</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\Slingshot\TrajectoryPrediction.cs" initialLine="97" containingFunctionPresentation="method 'SimulateArc'">
-            <startOffsets>
-              <option value="3910" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3936" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

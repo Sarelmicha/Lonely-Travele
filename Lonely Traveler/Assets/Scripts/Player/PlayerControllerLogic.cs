@@ -30,9 +30,13 @@ namespace HappyFlow.LonelyTraveler.Player
         /// Make the player jump in a certain direction and a <see cref="m_Thrust"/> force.
         /// </summary>
         /// <param name="direction">The direction to jump</param>
-        public void Jump(Vector3 direction)
+        public void Jump(Vector2 direction)
         {
-            m_PlayerRigidbody.AddForce(direction * m_Thrust);
+            Debug.Log("vel amount inside PlayerController= " + (m_Thrust / m_PlayerRigidbody.mass) * Time.fixedDeltaTime);
+            Debug.Log("vel = " + direction * m_Thrust);
+
+            m_PlayerRigidbody.velocity = direction * m_Thrust;
+            
         }
         
         /// <summary>
