@@ -5,100 +5,81 @@ using Cinemachine;
 using HappyFlow.LonelyTraveler.World.LevelExposure;
 using UnityEngine;
 
-public class CameraSwitcher : MonoBehaviour
+namespace HappyFlow.LonelyTraveler.World.Camera
 {
-   [SerializeField] private CinemachineVirtualCamera m_ExposureCamera;
-   [SerializeField] private CinemachineVirtualCamera m_PlayableCamera;
-
-   private List<CinemachineVirtualCamera> m_Cameras;
-
-   private void Awake()
+   public class CameraSwitcher : MonoBehaviour
    {
-      m_Cameras = new List<CinemachineVirtualCamera>();
-      Register(m_ExposureCamera);
-      Register(m_PlayableCamera);
-   }
+      [SerializeField] private CinemachineVirtualCameraBase m_ExposureCamera;
+      [SerializeField] private CinemachineVirtualCameraBase m_PlayableCamera;
 
-   private CinemachineVirtualCamera m_ActiveCamera;
+      private List<CinemachineVirtualCameraBase> m_Cameras;
 
-   private bool IsActiveCamera(CinemachineVirtualCamera camera)
-   {
-      return camera == m_ActiveCamera;
-   }
-
-   public void SwitchCamera(CameraType cameraType, Action onComplete = null)
-   {
-      var camera = cameraType switch
+      private void Awake()
       {
-         CameraType.ExposureCamera => m_ExposureCamera,
-         CameraType.PlayableCamera => m_PlayableCamera,
-         _ => throw new ArgumentOutOfRangeException(nameof(cameraType), cameraType, null)
-      };
-
-      if (IsActiveCamera(camera))
-      {
-         onComplete?.Invoke();
-         return;
+         m_Cameras = new List<CinemachineVirtualCameraBase>();
+         Register(m_ExposureCamera);
+         Register(m_PlayableCamera);
       }
 
-      camera.Priority = 10;
-      m_ActiveCamera = camera;
+      private CinemachineVirtualCameraBase m_ActiveCamera;
 
-      foreach (var virtualCamera in m_Cameras.Where(virtualCamera => virtualCamera != camera))
+      private bool IsActiveCamera(CinemachineVirtualCameraBase camera)
       {
-         virtualCamera.Priority = 0;
+         return camera == m_ActiveCamera;
       }
 
-      var levelExposureStrategy = camera.GetComponent<LevelExposureStrategy>();
-      
-      if (levelExposureStrategy == null)
+      public void SwitchCamera(CameraType cameraType, Action onComplete = null)
       {
-         return;
-      }
-      
-      levelExposureStrategy.Expose(onComplete);
-   }
+         var camera = cameraType switch
+         {
+            CameraType.ExposureCamera => m_ExposureCamera,
+            CameraType.PlayableCamera => m_PlayableCamera,
+            _ => throw new ArgumentOutOfRangeException(nameof(cameraType), cameraType, null)
+         };
 
-   private void Register(CinemachineVirtualCamera camera)
-   {
-      if (m_Cameras.Contains(camera))
-      {
-         Debug.Log($"Camera is already registered = {camera} ");
-         return;
+         if (IsActiveCamera(camera))
+         {
+            onComplete?.Invoke();
+            return;
+         }
+
+         m_ActiveCamera = camera;
+
+         foreach (var virtualCamera in m_Cameras.Where(virtualCamera => virtualCamera != camera))
+         {
+            virtualCamera.RemoveAsMainCamera();
+         }
+         
+         camera.SetAsMainCamera(onComplete);
       }
-      
-      m_Cameras.Add(camera);
-      Debug.Log($"Camera registered = {camera} ");
-   }
-   
-   private void Unregister(CinemachineVirtualCamera camera)
-   {
-      if (!m_Cameras.Contains(camera))
+
+      private void Register(CinemachineVirtualCameraBase camera)
       {
-         Debug.Log($"Camera is not registered = {camera} ");
-         return;
+         if (m_Cameras.Contains(camera))
+         {
+            Debug.Log($"Camera is already registered = {camera} ");
+            return;
+         }
+
+         m_Cameras.Add(camera);
+         Debug.Log($"Camera registered = {camera} ");
+      }
+
+      private void Unregister(CinemachineVirtualCameraBase camera)
+      {
+         if (!m_Cameras.Contains(camera))
+         {
+            Debug.Log($"Camera is not registered = {camera} ");
+            return;
+         }
+
+         m_Cameras.Remove(camera);
+         Debug.Log($"Camera unregister = {camera} ");
       }
       
-      m_Cameras.Remove(camera);
-      Debug.Log($"Camera unregister = {camera} ");
-   }
-
-   public enum CameraType
-   {
-      ExposureCamera,
-      PlayableCamera
-   }
-
-   public void Reset(bool shouldFullReset)
-   {
-      var levelExposureStrategy = m_ActiveCamera.GetComponent<LevelExposureStrategy>();
-
-      if (levelExposureStrategy == null)
+      public void Reset(bool shouldFullReset)
       {
-         return;
+         m_ActiveCamera.Reset(shouldFullReset);
       }
-      
-      levelExposureStrategy.Reset(shouldFullReset);
-
    }
 }

@@ -38,7 +38,9 @@ namespace HappyFlow.LonelyTraveler.Player
             {
                 return;
             }
-
+            
+            
+            Debug.Log($"OnMouseDown = CanDragSlingshot  = "  + CanDragSlingshot);
             Appear();
             SlingshotLogic.OnMouseDown();
         }
@@ -51,6 +53,13 @@ namespace HappyFlow.LonelyTraveler.Player
         
         void OnMouseDrag()
         {
+            if (!CanDragSlingshot)
+            {
+                return;
+            }
+            
+            Debug.Log($"OnMouseDrag = CanDragSlingshot  = "  + CanDragSlingshot);
+            
             m_SlingshotLogic.OnMouseDrag();
         }
         

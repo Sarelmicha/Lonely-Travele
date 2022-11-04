@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace HappyFlow.LonelyTraveler.Player
 {
@@ -14,7 +13,7 @@ namespace HappyFlow.LonelyTraveler.Player
         private readonly float m_Radius;
 
         private Vector3 m_MousePosition;
-        public bool IsDragging { get; private set; }
+        private bool IsDragging { get; set; }
 
         /// <summary>
         /// Invoke when the player release the target on a certain location. 
@@ -64,7 +63,6 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             IsDragging = false;
             var direction = GetDirection();
-            Debug.Log("OnMouseUp " + direction);
             OnTargetReleased?.Invoke(GetDirection());
             SetPosition(m_SlingshotHolderTransform.position);
         }
@@ -80,15 +78,12 @@ namespace HappyFlow.LonelyTraveler.Player
         public void OnMouseDrag()
         {
             var direction = GetDirection();
-            Debug.Log("OnMouseDrag " + direction);
             OnTargetDragging?.Invoke((GetDirection()));
         }
 
         private Vector3 GetDirection()
         {
             var d = m_SlingshotHolderTransform.position - m_SlingshotTransform.position;
-            Debug.Log("direction = " + d);
-            Debug.Log("normalized direction " + d.normalized);
             return m_SlingshotHolderTransform.position - m_SlingshotTransform.position;
         }
     }

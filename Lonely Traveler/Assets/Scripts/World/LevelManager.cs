@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HappyFlow.LonelyTraveler.World.Camera;
 using UnityEngine;
+using CameraType = HappyFlow.LonelyTraveler.World.Camera.CameraType;
 
 namespace HappyFlow.LonelyTraveler.World
 {
@@ -11,7 +13,7 @@ namespace HappyFlow.LonelyTraveler.World
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] private LevelLightManager m_LevelLightManager;
-        [SerializeField ]private CameraSwitcher m_CameraSwitcher;
+        [SerializeField] private CameraSwitcher m_CameraSwitcher;
 
         public event Action<bool> OnLevelShouldRestart;
         public event Action OnLevelStarted;
@@ -72,7 +74,7 @@ namespace HappyFlow.LonelyTraveler.World
         {
             IlluminateLevel(false, () =>
             {
-                m_CameraSwitcher.SwitchCamera(CameraSwitcher.CameraType.ExposureCamera, OnLevelExposed);
+                m_CameraSwitcher.SwitchCamera(CameraType.ExposureCamera, OnLevelExposed);
             });
         }
 
@@ -112,8 +114,10 @@ namespace HappyFlow.LonelyTraveler.World
 
         private void OnLevelExposed()
         {
-            m_CameraSwitcher.SwitchCamera(CameraSwitcher.CameraType.PlayableCamera, OnLevelExposed);
-            DarkenLevel(false, OnLevelStarted);
+            m_CameraSwitcher.SwitchCamera(CameraType.PlayableCamera, () =>
+            {
+                DarkenLevel(false, OnLevelStarted);
+            });
         }
     }
 }

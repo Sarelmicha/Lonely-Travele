@@ -1,28 +1,34 @@
 using System;
 using UnityEngine;
 
-public class PlayerCollider : MonoBehaviour
+namespace HappyFlow.LonelyTraveler.Player
 {
-    [SerializeField] private Collider2D m_Collider2D;
-
-    public event Action OnPlayerGrounded;
-    public event Action OnPlayerUngrounded;
-
-    private const string GROUND = "Ground";
-
-    private void OnCollisionEnter2D(Collision2D col)
+    /// <summary>
+    /// This class responsible for handling the collision of the player.
+    /// </summary>
+    public class PlayerCollider : MonoBehaviour
     {
-        if (col.gameObject.CompareTag(GROUND))
+        public event Action OnPlayerGrounded;
+        public event Action OnPlayerUngrounded;
+
+        private const string GROUND = "Ground";
+
+        private void OnCollisionEnter2D(Collision2D col)
         {
-            OnPlayerGrounded?.Invoke();
+            if (col.gameObject.CompareTag(GROUND))
+            {
+                Debug.Log("Player grounded.");
+                OnPlayerGrounded?.Invoke();
+            }
         }
-    }
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag(GROUND))
+        private void OnCollisionExit2D(Collision2D other)
         {
-            OnPlayerUngrounded?.Invoke();
+            if (other.gameObject.CompareTag(GROUND))
+            {
+                Debug.Log("Player not grounded.");
+                OnPlayerUngrounded?.Invoke();
+            }
         }
     }
 }
