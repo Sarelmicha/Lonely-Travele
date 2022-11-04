@@ -22,7 +22,7 @@ namespace HappyFlow.LonelyTraveler.Utils
 
             if (movementSwing != null)
             {
-                m_CurrentSequence.Append(obj.DOMove(Vector3.Normalize(obj.position - targetPosition) * movementSwing.Burst, movementSwing.Duration));
+                m_CurrentSequence.Append(obj.DOMove((obj.position - targetPosition).normalized * movementSwing.Burst, movementSwing.Duration));
             }
 
             m_CurrentSequence.Append(obj.DOMove(targetPosition, duration));

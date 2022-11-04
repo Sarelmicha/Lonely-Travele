@@ -33,9 +33,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/DoTweenShake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Shake/IShakeTweener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/ForceField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/LightReducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Enemies/Spike.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/FollowCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/LevelLightManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Terrace/FadingTerrace.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ParentCanvasIsSane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/EventSystem/InterceptedEventsPreviewTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/RectMask2D/RectMask2DCulling.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/TestBehaviourBase.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,10 +101,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1356">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1356" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -144,7 +145,7 @@
       <workItem from="1667071806278" duration="3347000" />
       <workItem from="1667322789541" duration="3934000" />
       <workItem from="1667410937546" duration="12837000" />
-      <workItem from="1667499499565" duration="9692000" />
+      <workItem from="1667499499565" duration="15737000" />
     </task>
     <servers />
   </component>
@@ -155,5 +156,50 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
+          <line>75</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="75" containingFunctionPresentation="lambda expression inside method 'ExposeLevel'">
+            <startOffsets>
+              <option value="2463" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2479" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/TopDownStrategy.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="39" containingFunctionPresentation="method 'Expose'">
+            <startOffsets>
+              <option value="1168" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1489" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/TopDownStrategy.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="41" containingFunctionPresentation="lambda expression inside method 'Expose'">
+            <startOffsets>
+              <option value="1305" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1473" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

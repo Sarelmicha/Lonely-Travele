@@ -1,5 +1,5 @@
 using System;
-using System.Collections;
+using HappyFlow.LonelyTraveler.World;
 using UnityEngine;
 using Rigidbody2D = UnityEngine.Rigidbody2D;
 

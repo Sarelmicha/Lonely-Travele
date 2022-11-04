@@ -16,20 +16,12 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         [SerializeField] private float m_FromTargetDuration;
         private Vector3 m_InitialPosition;
         private IMovementTweener m_MovementTweener;
-        private Collider2D m_Collider2D;
         private LevelManager m_LevelManager;
         
         private void Awake()
         {
             m_InitialPosition = transform.position;
             m_MovementTweener = new DoTweenTweener();
-    //        m_Collider2D = GetComponent<Collider2D>();
-        }
-
-        private void Start()
-        {
-            // disable collider before starting expose the top done strategy
-//            m_Collider2D.enabled = false;
         }
         
         /// <summary>
@@ -39,9 +31,8 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         {
             m_MovementTweener.MoveTo(transform, m_Target.position, m_ToTargetDuration, new MovementSwing(10, 1), () =>
             {
-                m_MovementTweener.MoveTo(transform, m_InitialPosition, m_FromTargetDuration, new MovementSwing(10, 1), () =>
+                m_MovementTweener.MoveTo(transform, m_InitialPosition, m_FromTargetDuration, null, () =>
                 {
-                    m_Collider2D.enabled = true;
                     onComplete?.Invoke();
                 });
             });
@@ -55,11 +46,6 @@ namespace HappyFlow.LonelyTraveler.World.LevelExposure
         {
             m_MovementTweener.StopTween();
             transform.position = m_InitialPosition;
-
-            if (shouldFullReset)
-            {
-                m_Collider2D.enabled = false;
-            }
         }
     }
 }

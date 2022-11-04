@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HappyFlow.LonelyTraveler.World;
 using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.Rewards.Point
