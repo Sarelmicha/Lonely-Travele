@@ -5,11 +5,11 @@ using UnityEngine;
 namespace HappyFlow.LonelyTraveler.World.LevelExposure
 {
     /// <summary>
-    /// This class responsible for exposing the level to the user with a Top Down Strategy.
+    /// This class responsible for exposing the level to the user with a Linear Line Strategy.
     /// The camera will move from bottom to top to the target and from the target to the bottom to the initial point in order
     /// to expose the level to the user.
     /// </summary>
-    public class TopDownStrategy : LevelExposureStrategy
+    public class LinearLineStrategy : LevelExposureStrategy
     {
         [SerializeField] private Transform m_Target;
         [SerializeField] private float m_ToTargetDuration;
