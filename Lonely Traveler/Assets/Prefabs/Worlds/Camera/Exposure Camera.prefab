@@ -221,4 +221,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VirtualCamera: {fileID: 8414670573743780226}
-  m_LevelExposureStrategy: {fileID: 0}
+  m_LevelExposureStrategy: {fileID: 962874641}
