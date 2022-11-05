@@ -4689,15 +4689,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2905.2563
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -56.536552
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -69.49337
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4705,15 +4705,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4726,6 +4726,22 @@ PrefabInstance:
     - target: {fileID: 6979545099248986858, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
+      propertyPath: m_LightReducerRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
+      propertyPath: m_MaximumLightLevel
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
+      propertyPath: m_MinimumLightLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
+      propertyPath: m_LightIncreaserRate
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cae2445172f41447a094da0d91c2557, type: 3}

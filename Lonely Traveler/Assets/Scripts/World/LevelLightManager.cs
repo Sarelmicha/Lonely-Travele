@@ -27,7 +27,7 @@ public class LevelLightManager : MonoBehaviour
 
         while (m_LevelGlobalLight.intensity > m_MinimumLightLevel)
         {
-            m_LevelGlobalLight.intensity -= m_LightReducerRate;
+            m_LevelGlobalLight.intensity -= m_LightReducerRate * Time.deltaTime;
             yield return null;
         }
         
@@ -50,7 +50,7 @@ public class LevelLightManager : MonoBehaviour
 
         while (m_LevelGlobalLight.intensity < m_MaximumLightLevel)
         {
-            m_LevelGlobalLight.intensity += m_LightIncreaserRate;
+            m_LevelGlobalLight.intensity += m_LightIncreaserRate * Time.deltaTime;
             yield return null;
         }
         
