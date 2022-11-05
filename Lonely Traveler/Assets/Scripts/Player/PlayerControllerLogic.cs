@@ -11,6 +11,7 @@ namespace HappyFlow.LonelyTraveler.Player
         private readonly float m_Thrust;
         private readonly PlayerSpotlight m_PlayerSpotlight;
         public Vector3 InitialPosition { get; set; }
+        private readonly Vector3 m_StartLevelPosition;
 
         /// <summary>
         /// Constructor for <see cref="PlayerControllerLogic"/>
@@ -23,6 +24,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerRigidbody = playerRigidbody;
             m_Thrust = thrust;
             InitialPosition = initialPosition;
+            m_StartLevelPosition = initialPosition;
             m_PlayerSpotlight = playerSpotlight;
         }
         
@@ -32,21 +34,23 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="direction">The direction to jump</param>
         public void Jump(Vector2 direction)
         {
-            Debug.Log("vel amount inside PlayerController= " + (m_Thrust / m_PlayerRigidbody.mass) * Time.fixedDeltaTime);
-            Debug.Log("vel = " + direction * m_Thrust);
-
             m_PlayerRigidbody.velocity = direction * m_Thrust;
-            
         }
-        
+
         /// <summary>
         /// Reset the player position in the initial position and set it velocity to zero
         /// </summary>
-        public void Reset()
+        /// <param name="shouldFullReset">A flag that indicate whether to full reset the player controller or not.</param>
+        public void Reset(bool shouldFullReset)
         {
-            m_PlayerRigidbody.transform.position = InitialPosition;
+            if (shouldFullReset)
+            {
+                InitialPosition = m_StartLevelPosition;
+            }
+            
             m_PlayerRigidbody.velocity = Vector2.zero;
-            m_PlayerSpotlight.Reset();
+            m_PlayerRigidbody.transform.position = InitialPosition;
+            m_PlayerSpotlight.Reset(shouldFullReset);
         }
 
         /// <summary>

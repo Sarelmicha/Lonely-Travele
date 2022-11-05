@@ -19,7 +19,7 @@ namespace HappyFlow.LonelyTraveler.Player
         private PlayerCollider m_PlayerCollider;
         private LevelManager m_LevelManager;
         private bool m_IsAlive;
-        private bool m_IsLevelStarted;
+        private bool m_CanJump;
         private TrajectoryPrediction m_TrajectoryPrediction;
         
         private void Awake()
@@ -52,8 +52,8 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart += Reset;
             m_LevelManager.OnLevelStarted += OnLevelStarted;
-            m_PlayerCollider.OnPlayerGrounded += EnableJump;
-            m_PlayerCollider.OnPlayerUngrounded += DisableJump;
+            m_PlayerCollider.OnPlayerGrounded += EnableSlingshot;
+            m_PlayerCollider.OnPlayerUngrounded += DisableSlingshot;
             m_TrajectoryPrediction.Initialize(m_Force);
         }
 
@@ -63,8 +63,8 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart -= Reset;
             m_LevelManager.OnLevelStarted -= OnLevelStarted;
-            m_PlayerCollider.OnPlayerGrounded -= EnableJump;
-            m_PlayerCollider.OnPlayerUngrounded -= DisableJump;
+            m_PlayerCollider.OnPlayerGrounded -= EnableSlingshot;
+            m_PlayerCollider.OnPlayerUngrounded -= DisableSlingshot;
         }
 
         /// <summary>
@@ -85,15 +85,16 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Reset the player position in the initial position and set it velocity to zero
         /// </summary>
+        /// <param name="shouldFullReset">A flag that indicate whether to full reset the player controller or not.</param>
         private void Reset(bool shouldFullReset)
         {
-            m_PlayerControllerLogic.Reset();
+            m_PlayerControllerLogic.Reset(shouldFullReset);
             m_IsAlive = true;
             //Do some awake animation
 
             if (shouldFullReset)
             {
-                m_IsLevelStarted = false;
+                m_CanJump = false;
                 m_Slingshot.CanDragSlingshot = false;
             }
         }
@@ -105,6 +106,14 @@ namespace HappyFlow.LonelyTraveler.Player
         public void SetInitialPosition(Vector3 position)
         {
             m_PlayerControllerLogic.InitialPosition = position;
+        }
+
+        /// <summary>
+        /// Save the current spotlight radius
+        /// </summary>
+        public void SaveCurrentSpotlightRadius()
+        {
+            m_PlayerSpotlight.SaveCurrentSpotlightRadius();
         }
 
         /// <summary>
@@ -152,14 +161,14 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             IlluminateSpotlight(() =>
             {
-                m_IsLevelStarted = true;
-                EnableJump();
+                m_CanJump = true;
+                EnableSlingshot();
             });
         }
 
-        private void EnableJump()
+        private void EnableSlingshot()
         {
-            if (!m_IsLevelStarted)
+            if (!m_CanJump)
             {
                 return;
             }
@@ -167,7 +176,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_Slingshot.CanDragSlingshot = true;
         }
 
-        private void DisableJump()
+        private void DisableSlingshot()
         {
             m_Slingshot.CanDragSlingshot = false;
         }

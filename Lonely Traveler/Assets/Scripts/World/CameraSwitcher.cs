@@ -13,6 +13,7 @@ namespace HappyFlow.LonelyTraveler.World.Camera
       [SerializeField] private CinemachineVirtualCameraBase m_PlayableCamera;
 
       private List<CinemachineVirtualCameraBase> m_Cameras;
+      private CinemachineVirtualCameraBase m_ActiveCamera;
 
       private void Awake()
       {
@@ -21,13 +22,23 @@ namespace HappyFlow.LonelyTraveler.World.Camera
          Register(m_PlayableCamera);
       }
 
-      private CinemachineVirtualCameraBase m_ActiveCamera;
+      private void OnDestroy()
+      {
+         Unregister(m_ExposureCamera);
+         Unregister(m_PlayableCamera);
+      }
 
       private bool IsActiveCamera(CinemachineVirtualCameraBase camera)
       {
          return camera == m_ActiveCamera;
       }
 
+      /// <summary>
+      /// Switch camera to be the main camera according to <see cref="CameraType"/>
+      /// </summary>
+      /// <param name="cameraType">The camera type of the camera to set as main camera</param>
+      /// <param name="onComplete">Invoke when the switch camera completes.</param>
+      /// <exception cref="ArgumentOutOfRangeException"></exception>
       public void SwitchCamera(CameraType cameraType, Action onComplete = null)
       {
          var camera = cameraType switch
@@ -80,6 +91,11 @@ namespace HappyFlow.LonelyTraveler.World.Camera
       public void Reset(bool shouldFullReset)
       {
          m_ActiveCamera.Reset(shouldFullReset);
+
+         if (shouldFullReset)
+         {
+            m_ActiveCamera = null;
+         }
       }
    }
 }

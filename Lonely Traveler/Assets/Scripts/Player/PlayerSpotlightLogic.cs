@@ -6,13 +6,14 @@ namespace HappyFlow.LonelyTraveler.Player
     public class PlayerSpotlightLogic
     {
         private readonly Light2D m_Spotlight;
-        private readonly float m_InitialLight;
+        private readonly float m_InitialSpotlightRadius;
+        private float currentSpotlightRadius;
         public event Action OnLightReachedZero;
 
-        public PlayerSpotlightLogic(Light2D spotlight, float initialLight)
+        public PlayerSpotlightLogic(Light2D spotlight, float initialSpotlightRadius)
         {
             m_Spotlight = spotlight;
-            m_InitialLight = initialLight;
+            m_InitialSpotlightRadius = initialSpotlightRadius;
         }
         
         /// <summary>
@@ -41,9 +42,23 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Reset the light value to be equal to the initial value
         /// </summary>
-        public void Reset()
+        /// <param name="shouldFullReset">A flag that indicate whether should we full reset the spotlight or not</param>
+        public void Reset(bool shouldFullReset)
         {
-            m_Spotlight.pointLightOuterRadius = m_InitialLight;
+            if (shouldFullReset)
+            {
+                currentSpotlightRadius = m_InitialSpotlightRadius;
+            }
+
+            m_Spotlight.pointLightOuterRadius = currentSpotlightRadius;
+        }
+
+        /// <summary>
+        /// Save the current spotlight radius.
+        /// </summary>
+        public void SaveCurrentSpotlightRadius()
+        {
+            currentSpotlightRadius = m_Spotlight.pointLightOuterRadius;
         }
     }
 }

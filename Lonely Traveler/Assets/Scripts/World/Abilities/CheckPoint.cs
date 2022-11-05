@@ -11,6 +11,7 @@ namespace HappyFlow.LonelyTraveler.World
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
             playerController.SetInitialPosition(transform.position);
+            playerController.SaveCurrentSpotlightRadius();
         }
     }
 }

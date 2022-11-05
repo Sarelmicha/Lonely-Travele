@@ -34,9 +34,10 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Reset the light value to be equal to the initial value
         /// </summary>
-        public void Reset()
+        /// <param name="shouldFullReset">A flag that indicate whether should we full reset the spotlight or not</param>
+        public void Reset(bool shouldFullReset)
         {
-            PlayerSpotlightLogic.Reset();
+            PlayerSpotlightLogic.Reset(shouldFullReset);
         }
 
         public void SubscribeOnLightReachedZeroEvent(Action action)
@@ -62,6 +63,14 @@ namespace HappyFlow.LonelyTraveler.Player
             }
             
             onComplete?.Invoke();
+        }
+
+        /// <summary>
+        /// Save the current spotlight radius.
+        /// </summary>
+        public void SaveCurrentSpotlightRadius()
+        {
+            m_PlayerSpotlightLogic.SaveCurrentSpotlightRadius();
         }
     }
 }
