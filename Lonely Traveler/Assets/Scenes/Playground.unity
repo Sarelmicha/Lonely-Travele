@@ -4462,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3904197317218277458, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -151.69171
+      value: -321.16086
       objectReference: {fileID: 0}
     - target: {fileID: 3904197317218277458, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4733,11 +4733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_MaximumLightLevel
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_MinimumLightLevel
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986859, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_LightIncreaserRate
