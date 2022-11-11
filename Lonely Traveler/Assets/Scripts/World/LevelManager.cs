@@ -15,8 +15,21 @@ namespace HappyFlow.LonelyTraveler.World
         [SerializeField] private LevelLightManager m_LevelLightManager;
         [SerializeField] private CameraSwitcher m_CameraSwitcher;
 
+        /// <summary>
+        /// Invoke when the level should start inorder to notify any component needed to restart.
+        /// </summary>
         public event Action<bool> OnLevelShouldRestart;
+        
+        /// <summary>
+        /// Invoke when the level started in order to notify any component needed that level was started.
+        /// </summary>
         public event Action OnLevelStarted;
+        
+        /// <summary>
+        /// Invoke when the state should be saved in order to notify any component needed to save its state.
+        /// </summary>
+        public event Action OnStateShouldBeSaved;
+        
         private Animator m_Transitions;
         private bool m_ShouldExecuteFullRestart;
         private List<Coroutine> m_RunningCoroutines;
@@ -47,6 +60,14 @@ namespace HappyFlow.LonelyTraveler.World
             {
                 ExposeLevel();
             }
+        }
+
+        /// <summary>
+        /// Notify that the current state of the level should be saved.
+        /// </summary>
+        public void SaveState()
+        {
+            OnStateShouldBeSaved?.Invoke();
         }
 
         private void Awake()

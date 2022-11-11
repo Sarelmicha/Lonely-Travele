@@ -21,7 +21,10 @@ public class PointDisplay : MonoBehaviour
          m_Animator.Play("Collect");
    }
    
-   public void Reset(bool shouldFullReset)
+   /// <summary>
+   /// Reset the point display.
+   /// </summary>
+   public void Reset()
    {
       m_PointDisplayLogic.IsFull = false;
       m_Animator.Play("Idle");

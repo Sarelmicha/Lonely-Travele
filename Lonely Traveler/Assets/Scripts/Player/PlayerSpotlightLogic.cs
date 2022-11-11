@@ -14,6 +14,7 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             m_Spotlight = spotlight;
             m_InitialSpotlightRadius = initialSpotlightRadius;
+            currentSpotlightRadius = m_InitialSpotlightRadius;
         }
         
         /// <summary>

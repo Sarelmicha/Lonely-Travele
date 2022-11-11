@@ -13,13 +13,14 @@ namespace HappyFlow.LonelyTraveler.Player
         [SerializeField] private float m_Force;
         [SerializeField] private Slingshot m_Slingshot;
         
+        private bool m_IsAlive;
+        private bool m_CanJump;
+        
         private Rigidbody2D m_Rigidbody;
         private PlayerControllerLogic m_PlayerControllerLogic;
         private PlayerSpotlight m_PlayerSpotlight;
         private PlayerCollider m_PlayerCollider;
         private LevelManager m_LevelManager;
-        private bool m_IsAlive;
-        private bool m_CanJump;
         private TrajectoryPrediction m_TrajectoryPrediction;
         
         private void Awake()
@@ -52,6 +53,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.SubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart += Reset;
             m_LevelManager.OnLevelStarted += OnLevelStarted;
+            m_LevelManager.OnStateShouldBeSaved += SaveCurrentState;
             m_PlayerCollider.OnPlayerGrounded += EnableSlingshot;
             m_PlayerCollider.OnPlayerUngrounded += DisableSlingshot;
             m_TrajectoryPrediction.Initialize(m_Force);
@@ -63,6 +65,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight.UnsubscribeOnLightReachedZeroEvent(Die);
             m_LevelManager.OnLevelShouldRestart -= Reset;
             m_LevelManager.OnLevelStarted -= OnLevelStarted;
+            m_LevelManager.OnStateShouldBeSaved -= SaveCurrentState;
             m_PlayerCollider.OnPlayerGrounded -= EnableSlingshot;
             m_PlayerCollider.OnPlayerUngrounded -= DisableSlingshot;
         }
@@ -103,7 +106,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// Set the initial position of the player.
         /// </summary>
         /// <param name="position">The position to set as initial position</param>
-        public void SetInitialPosition(Vector3 position)
+        private void SetInitialPosition(Vector3 position)
         {
             m_PlayerControllerLogic.InitialPosition = position;
         }
@@ -111,11 +114,17 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <summary>
         /// Save the current spotlight radius
         /// </summary>
-        public void SaveCurrentSpotlightRadius()
+        private void SaveCurrentSpotlightRadius()
         {
             m_PlayerSpotlight.SaveCurrentSpotlightRadius();
         }
 
+        private void SaveCurrentState()
+        {
+            SetInitialPosition(transform.position);
+            SaveCurrentSpotlightRadius();
+        }
+        
         /// <summary>
         /// Apply force to the player in a certain vector
         /// </summary>

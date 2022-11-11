@@ -11,21 +11,27 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
     {
         [SerializeField] private PointsStorage m_PointsStorage;
 
+        /// <summary>
+        /// Show on UI and Notify Point storage that the point was collected.
+        /// </summary>
         public void Collect()
         {
             // Do some animation to show star was collected.
-            m_PointsStorage.OnCollect();
+            m_PointsStorage.OnCollect(this);
             gameObject.SetActive(false);
+        }
+        
+        /// <summary>
+        /// Reset the point to its initial state.
+        /// </summary>
+        public void Reset()
+        {
+            gameObject.SetActive(true);
         }
 
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
             Collect();
-        }
-
-        protected override void Reset(bool shouldFullReset)
-        {
-            gameObject.SetActive(true);
         }
     }
 }

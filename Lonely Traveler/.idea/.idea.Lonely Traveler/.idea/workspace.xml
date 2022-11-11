@@ -47,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/TriggerAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/BoneDrawingUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/OutlineGenerator/OutlineGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Editor/BurstDisassembler.Core.ARM64.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Scripts/ActivateCameraWithDistance.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.2/Editor/LookDev/ComparisonGizmoController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,6 +69,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/RectMask2D/RectMask2DCulling.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/TestBehaviourBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Button/TestButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/SelectableTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/ToggleTestImageHook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/ImageHook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/UIBehaviourExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -115,10 +117,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15644">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6016">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="15644" />
+      <option name="pid" value="6016" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -161,7 +163,8 @@
       <workItem from="1667410937546" duration="12837000" />
       <workItem from="1667499499565" duration="22073000" />
       <workItem from="1667593831362" duration="2063000" />
-      <workItem from="1667633840073" duration="8484000" />
+      <workItem from="1667633840073" duration="9193000" />
+      <workItem from="1668161827942" duration="5840000" />
     </task>
     <servers />
   </component>
@@ -179,93 +182,20 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/LinearLineStrategy.cs</url>
           <line>31</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="39" containingFunctionPresentation="method 'Expose'">
-            <startOffsets>
-              <option value="1171" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1492" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="39" containingFunctionPresentation="method 'Expose'" />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/LinearLineStrategy.cs</url>
           <line>33</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="41" containingFunctionPresentation="lambda expression inside method 'Expose'">
-            <startOffsets>
-              <option value="1308" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1476" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="41" containingFunctionPresentation="lambda expression inside method 'Expose'" />
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs</url>
-          <line>43</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\CameraSwitcher.cs" initialLine="32" containingFunctionPresentation="method 'SwitchCamera'">
-            <startOffsets>
-              <option value="1444" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1708" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Prefabs/Worlds/Level/LevelExposure/LinearLineStrategy.cs</url>
           <line>35</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="35" containingFunctionPresentation="lambda expression inside method 'Expose'">
-            <startOffsets>
-              <option value="1435" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1456" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Prefabs\Worlds\Level\LevelExposure\TopDownStrategy.cs" initialLine="35" containingFunctionPresentation="lambda expression inside method 'Expose'" />
           <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>116</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="116" containingFunctionPresentation="method 'OnLevelExposed'">
-            <startOffsets>
-              <option value="3726" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3870" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>41</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="41" containingFunctionPresentation="method 'RestartLevel'">
-            <startOffsets>
-              <option value="1564" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1615" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs</url>
-          <line>92</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\CameraSwitcher.cs" initialLine="81" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="2802" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2840" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/Camera/ExposureCamera.cs</url>
@@ -294,108 +224,69 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>74</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="74" containingFunctionPresentation="method 'ExposeLevel'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs</url>
+          <line>72</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Rewards\Point\PointsStorageLogic.cs" initialLine="65" containingFunctionPresentation="method 'SaveCurrentPointsAmount'">
             <startOffsets>
-              <option value="2394" />
+              <option value="2358" />
             </startOffsets>
             <endOffsets>
-              <option value="2542" />
+              <option value="2415" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/LevelManager.cs</url>
-          <line>76</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\LevelManager.cs" initialLine="76" containingFunctionPresentation="lambda expression inside method 'ExposeLevel'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Rewards\Point\PointsStorageLogic.cs" initialLine="38" containingFunctionPresentation="method 'Reset'">
             <startOffsets>
-              <option value="2453" />
+              <option value="1312" />
             </startOffsets>
             <endOffsets>
-              <option value="2526" />
+              <option value="1331" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
           <line>50</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\CameraSwitcher.cs" initialLine="39" containingFunctionPresentation="method 'SwitchCamera'">
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="49" containingFunctionPresentation="method 'Reset'">
             <startOffsets>
-              <option value="1719" />
+              <option value="1716" />
             </startOffsets>
             <endOffsets>
-              <option value="1746" />
+              <option value="1766" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs</url>
-          <line>63</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\CameraSwitcher.cs" initialLine="52" containingFunctionPresentation="method 'SwitchCamera'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="47" containingFunctionPresentation="method 'Reset'">
             <startOffsets>
-              <option value="2046" />
+              <option value="1665" />
             </startOffsets>
             <endOffsets>
-              <option value="2081" />
+              <option value="1685" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Camera/CinemachineVirtualCameraBase.cs</url>
-          <line>15</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Camera\CinemachineVirtualCameraBase.cs" initialLine="15" containingFunctionPresentation="method 'SetAsMainCamera'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
+          <line>53</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="52" containingFunctionPresentation="method 'Reset'">
             <startOffsets>
-              <option value="425" />
+              <option value="1794" />
             </startOffsets>
             <endOffsets>
-              <option value="455" />
+              <option value="1853" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Camera/ExposureCamera.cs</url>
-          <line>12</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Camera\ExposureCamera.cs" initialLine="12" containingFunctionPresentation="method 'OnSetToMainCamera'">
-            <startOffsets>
-              <option value="384" />
-            </startOffsets>
-            <endOffsets>
-              <option value="427" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Level/LevelExposure/LinearLineStrategy.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Level\LevelExposure\LinearLineStrategy.cs" initialLine="31" containingFunctionPresentation="method 'Expose'">
-            <startOffsets>
-              <option value="1174" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1495" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Level/LevelExposure/LinearLineStrategy.cs</url>
-          <line>33</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Level\LevelExposure\LinearLineStrategy.cs" initialLine="33" containingFunctionPresentation="lambda expression inside method 'Expose'">
-            <startOffsets>
-              <option value="1311" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1479" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

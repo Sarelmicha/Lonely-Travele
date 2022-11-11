@@ -11,7 +11,7 @@ namespace HappyFlow.LonelyTraveler.World
   {
     protected PlayerController m_PlayerController;
     protected bool m_IsPlayerInsideCollider;
-    private LevelManager m_LevelManager;
+    protected LevelManager m_LevelManager;
     
     private void Start()
     {

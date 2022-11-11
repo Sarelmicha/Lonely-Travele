@@ -51,14 +51,12 @@ namespace HappyFlow.LonelyTraveler.Player
             SlingshotLogic.OnMouseUp();
         }
         
-        void OnMouseDrag()
+        private void OnMouseDrag()
         {
             if (!CanDragSlingshot)
             {
                 return;
             }
-            
-            Debug.Log($"OnMouseDrag = CanDragSlingshot  = "  + CanDragSlingshot);
             
             m_SlingshotLogic.OnMouseDrag();
         }

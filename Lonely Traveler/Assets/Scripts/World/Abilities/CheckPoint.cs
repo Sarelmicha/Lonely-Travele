@@ -8,10 +8,17 @@ namespace HappyFlow.LonelyTraveler.World
     /// </summary>
     public class CheckPoint : TriggerAbility
     {
+        private bool m_IsMarked;
+        
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
-            playerController.SetInitialPosition(transform.position);
-            playerController.SaveCurrentSpotlightRadius();
+            if (m_IsMarked)
+            {
+                return;
+            }
+            
+            m_IsMarked = true;
+            m_LevelManager.SaveState();
         }
     }
 }

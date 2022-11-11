@@ -10,6 +10,16 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
         private PointsStorageLogic m_PointsStorageLogic;
         private LevelManager m_LevelManager;
 
+        /// <summary>
+        /// Called after point was collected by the player.
+        /// Handle the Fill process for each point collected
+        /// </summary>
+        /// <param name="point"></param>
+        public void OnCollect(Point point)
+        {
+            m_PointsStorageLogic.OnCollect(point);
+        }
+        
         private void Awake()
         {
             m_PointsStorageLogic = new PointsStorageLogic(m_PointsDisplays);
@@ -27,25 +37,26 @@ namespace HappyFlow.LonelyTraveler.Rewards.Point
       
             m_LevelManager = go.GetComponent<LevelManager>();
             m_LevelManager.OnLevelShouldRestart += Reset;
+            m_LevelManager.OnStateShouldBeSaved += SaveCurrentPointsAmount;
         }
 
         private void OnDestroy()
         {
             m_LevelManager.OnLevelShouldRestart -= Reset;
-        }
-
-        /// <summary>
-        /// Called after point was collected by the player.
-        /// Handle the Fill process for each point collected
-        /// </summary>
-        public void OnCollect()
-        {
-            m_PointsStorageLogic.OnCollect();
+            m_LevelManager.OnStateShouldBeSaved -= SaveCurrentPointsAmount;
         }
         
         private void Reset(bool shouldFullReset)
         {
             m_PointsStorageLogic.Reset(shouldFullReset);
+        }
+
+        /// <summary>
+        /// Save the initial points amount collected as the current amount collected.
+        /// </summary>
+        private void SaveCurrentPointsAmount()
+        {
+            m_PointsStorageLogic.SaveCurrentPointsAmount();
         }
     }
 }
