@@ -1202,7 +1202,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 350.5
+  orthographic size: 500
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1226,7 +1226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -151.69171, y: -50.685516, z: -20}
+  m_LocalPosition: {x: -57.041534, y: -14.805534, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4447,7 +4447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3904197317218277458, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.402893
+      value: -57.041534
       objectReference: {fileID: 0}
     - target: {fileID: 3904197317218277458, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4489,6 +4489,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 938932594}
+    - target: {fileID: 3904197317218277459, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
+      propertyPath: m_Priority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3904197317218277459, guid: ca3efcac6e511fe4aa064832af9f24d8, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 500
@@ -4668,6 +4672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6979545097995357269, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6979545099248986856, guid: 6cae2445172f41447a094da0d91c2557, type: 3}
       propertyPath: m_Name
       value: Level Light Manager
@@ -4797,6 +4805,10 @@ PrefabInstance:
       propertyPath: m_PlayableCamera
       value: 
       objectReference: {fileID: 1542645792}
+    - target: {fileID: 7267876973106724031, guid: 2c97a3b428f68de458ed2d99d9d0d35c, type: 3}
+      propertyPath: m_CinemachineBrain
+      value: 
+      objectReference: {fileID: 519420038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c97a3b428f68de458ed2d99d9d0d35c, type: 3}
 --- !u!1001 &8272851073677518180
@@ -4969,6 +4981,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414670573743780225, guid: d2d0d294da3b1fe46991eeca0583a277, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414670573743780226, guid: d2d0d294da3b1fe46991eeca0583a277, type: 3}
+      propertyPath: m_Priority
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8414670573743780228, guid: d2d0d294da3b1fe46991eeca0583a277, type: 3}

@@ -23,6 +23,11 @@ namespace HappyFlow.LonelyTraveler.Player
         private LevelManager m_LevelManager;
         private TrajectoryPrediction m_TrajectoryPrediction;
         
+        /// <summary>
+        /// The original parent transform of the player
+        /// </summary>
+        public Transform OriginalParent { get; private set; }
+
         private void Awake()
         {
             m_Rigidbody = GetComponent<Rigidbody2D>();
@@ -30,6 +35,7 @@ namespace HappyFlow.LonelyTraveler.Player
             m_PlayerSpotlight = GetComponentInChildren<PlayerSpotlight>();
             m_PlayerCollider = GetComponentInChildren<PlayerCollider>();
             m_PlayerControllerLogic = new PlayerControllerLogic(m_Rigidbody, m_Force, transform.position, m_PlayerSpotlight);
+            OriginalParent = transform.parent;
             m_IsAlive = true;
             
             var go = GameObject.FindGameObjectWithTag("LevelManager");
@@ -97,6 +103,7 @@ namespace HappyFlow.LonelyTraveler.Player
 
             if (shouldFullReset)
             {
+                transform.SetParent(OriginalParent);
                 m_CanJump = false;
                 m_Slingshot.CanDragSlingshot = false;
             }

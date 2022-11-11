@@ -18,7 +18,6 @@ namespace HappyFlow.LonelyTraveler.Utils
         /// <param name="onComplete">Call when movement is finished</param>
         public void MoveTo(Transform obj, Vector3 targetPosition, float duration, MovementSwing movementSwing = null, Action onComplete = null)
         {
-            Debug.Log("start moving");
             m_CurrentSequence = DOTween.Sequence();
 
             if (movementSwing != null)

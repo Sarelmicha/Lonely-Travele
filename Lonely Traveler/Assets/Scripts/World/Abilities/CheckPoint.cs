@@ -1,3 +1,4 @@
+using System;
 using HappyFlow.LonelyTraveler.Player;
 
 namespace HappyFlow.LonelyTraveler.World
@@ -19,6 +20,14 @@ namespace HappyFlow.LonelyTraveler.World
             
             m_IsMarked = true;
             m_LevelManager.SaveState();
+        }
+
+        protected override void Reset(bool shouldFullReset)
+        {
+            if (shouldFullReset)
+            {
+                m_IsMarked = false;
+            }
         }
     }
 }

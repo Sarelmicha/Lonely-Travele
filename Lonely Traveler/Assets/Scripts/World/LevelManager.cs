@@ -50,8 +50,8 @@ namespace HappyFlow.LonelyTraveler.World
         /// </summary>
         public void RestartLevel()
         {
+            StartCoroutine(m_LevelLightManager.DarkenLevel(m_ShouldExecuteFullRestart));
             OnLevelShouldRestart?.Invoke(m_ShouldExecuteFullRestart);
-            m_LevelLightManager.DarkenLevel(m_ShouldExecuteFullRestart);
             m_CameraSwitcher.Reset(m_ShouldExecuteFullRestart);
            
             StopRunningRoutines();

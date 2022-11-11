@@ -11,7 +11,6 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
         private IMovementTweener m_MovementTweener;
         private Vector3 m_InitialPosition;
-        private Transform m_PreviousPlayerParent;
 
         private bool m_IsMoving;
 
@@ -49,14 +48,13 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
                 return;
             }
 
-            m_PreviousPlayerParent = playerController.transform.parent;
             playerController.transform.SetParent(transform);
             Move();
         }
 
         protected override void OnPlayerTriggerExit2D(PlayerController playerController)
         {
-            playerController.transform.SetParent(m_PreviousPlayerParent);
+            playerController.transform.SetParent(playerController.OriginalParent);
         }
 
         protected override void Reset(bool shouldFullReset)

@@ -49,26 +49,36 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/OutlineGenerator/OutlineGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Editor/BurstDisassembler.Core.ARM64.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Tests/Runtime/Shared/031-Pointers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/CinemachineCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Scripts/ActivateCameraWithDistance.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.2/Editor/LookDev/ComparisonGizmoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.2/Runtime/Passes/PostProcessPass.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.2/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.2/Runtime/UniversalRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.2/Shaders/Nature/SpeedTree8Passes.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.2/Editor/MenuPriority.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.2/Editor/Window/TimelineWindow_EditorCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.2/Editor/treeview/ItemGui/TimelineItemGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/AspectRatioFitterEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/CanvasScalerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/InterceptedEventsPreview.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Utility/VertexHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/CanvasWidthAssertionErrorWithRectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ParentCanvasIsSane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/EventSystem/InterceptedEventsPreviewTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/RectMask2D/RectMask2DCulling.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/TestBehaviourBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Button/TestButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/RaycastSortingTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/SelectableTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/ToggleTestImageHook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/ImageHook.cs" root0="SKIP_HIGHLIGHTING" />
@@ -117,10 +127,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6016">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1932">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="6016" />
+      <option name="pid" value="1932" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -164,7 +174,7 @@
       <workItem from="1667499499565" duration="22073000" />
       <workItem from="1667593831362" duration="2063000" />
       <workItem from="1667633840073" duration="9193000" />
-      <workItem from="1668161827942" duration="7612000" />
+      <workItem from="1668161827942" duration="14263000" />
     </task>
     <servers />
   </component>
@@ -198,32 +208,6 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Camera/ExposureCamera.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Camera\ExposureCamera.cs" initialLine="17" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="518" />
-            </startOffsets>
-            <endOffsets>
-              <option value="565" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Level/LevelExposure/LinearLineStrategy.cs</url>
-          <line>46</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Level\LevelExposure\LinearLineStrategy.cs" initialLine="46" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="1775" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1805" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs</url>
           <line>72</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Rewards\Point\PointsStorageLogic.cs" initialLine="65" containingFunctionPresentation="method 'SaveCurrentPointsAmount'">
@@ -237,17 +221,30 @@
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Movement/DoTweenTweener.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Utils\Tweener\Movement\DoTweenTweener.cs" initialLine="20" containingFunctionPresentation="method 'MoveTo'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
+          <line>117</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerController.cs" initialLine="110" containingFunctionPresentation="method 'SetInitialPosition'">
             <startOffsets>
-              <option value="914" />
+              <option value="4222" />
             </startOffsets>
             <endOffsets>
-              <option value="940" />
+              <option value="4273" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/CameraSwitcher.cs</url>
+          <line>94</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\CameraSwitcher.cs" initialLine="96" containingFunctionPresentation="method 'Reset'">
+            <startOffsets>
+              <option value="2824" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2836" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
