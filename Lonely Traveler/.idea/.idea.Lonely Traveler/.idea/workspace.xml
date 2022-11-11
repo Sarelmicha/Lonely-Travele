@@ -164,7 +164,7 @@
       <workItem from="1667499499565" duration="22073000" />
       <workItem from="1667593831362" duration="2063000" />
       <workItem from="1667633840073" duration="9193000" />
-      <workItem from="1668161827942" duration="5840000" />
+      <workItem from="1668161827942" duration="7612000" />
     </task>
     <servers />
   </component>
@@ -237,58 +237,24 @@
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Rewards/Point/PointsStorageLogic.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Rewards\Point\PointsStorageLogic.cs" initialLine="38" containingFunctionPresentation="method 'Reset'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Utils/Tweener/Movement/DoTweenTweener.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Utils\Tweener\Movement\DoTweenTweener.cs" initialLine="20" containingFunctionPresentation="method 'MoveTo'">
             <startOffsets>
-              <option value="1312" />
+              <option value="914" />
             </startOffsets>
             <endOffsets>
-              <option value="1331" />
+              <option value="940" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
-          <line>50</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="49" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="1716" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1766" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="47" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="1665" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1685" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpotlightLogic.cs</url>
-          <line>53</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerSpotlightLogic.cs" initialLine="52" containingFunctionPresentation="method 'Reset'">
-            <startOffsets>
-              <option value="1794" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1853" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#DG.Tweening.Tween" memberName="active" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

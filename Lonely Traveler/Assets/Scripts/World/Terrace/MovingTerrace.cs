@@ -13,6 +13,8 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         private Vector3 m_InitialPosition;
         private Transform m_PreviousPlayerParent;
 
+        private bool m_IsMoving;
+
         private void Awake()
         {
             m_MovementTweener = new DoTweenTweener();
@@ -21,6 +23,12 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         
         private void Move()
         {
+            if (m_IsMoving)
+            {
+                return;
+            }
+
+            m_IsMoving = true;
             m_MovementTweener.MoveTo(transform, m_Target.position, m_Speed, null, OnTargetReached);
         }
 
@@ -54,6 +62,7 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
         protected override void Reset(bool shouldFullReset)
         {
             m_MovementTweener.StopTween();
+            m_IsMoving = false;
             transform.position = m_InitialPosition;
         }
     }
