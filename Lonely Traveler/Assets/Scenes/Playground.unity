@@ -5072,7 +5072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 878547150324772512, guid: 2a3e300b4e66e574caf0be30bf9ba8ca, type: 3}
       propertyPath: m_Force.y
-      value: -1500
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 878547150324772517, guid: 2a3e300b4e66e574caf0be30bf9ba8ca, type: 3}
       propertyPath: m_Name

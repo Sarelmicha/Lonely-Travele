@@ -59,7 +59,7 @@ namespace HappyFlow.LonelyTraveler.Player
         /// <param name="force"></param>
         public void AddForce(Vector2 force)
         {
-            m_PlayerRigidbody.AddForce(force);
+            m_PlayerRigidbody.velocity += force;
         }
     }
 }
