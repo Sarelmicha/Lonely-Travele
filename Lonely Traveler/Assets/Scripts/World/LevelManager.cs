@@ -140,5 +140,10 @@ namespace HappyFlow.LonelyTraveler.World
                 DarkenLevel(false, OnLevelStarted);
             });
         }
+
+        public void FinishLevel()
+        {
+            // Level Finished...
+        }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 public class TrajectoryPrediction : MonoBehaviour
 {
     [SerializeField] private Slingshot m_Slingshot;
-    [SerializeField] private float _collisionCheckRadius = 1f; 
+    [SerializeField] private float _collisionCheckRadius = 500f; 
     [SerializeField] private float m_MaxDuration = 50; //INPUT amount of total time for simulation
     [SerializeField] private Rigidbody2D m_Target;
 
@@ -78,6 +78,12 @@ public class TrajectoryPrediction : MonoBehaviour
         for (int i = 0; i < steps; i++)
         {
             moveStep = CalculateStep(moveStep, gravityAccel, drag, ref position);
+
+            if (CheckForCollision(moveStep))
+            {
+                break;
+            }
+
             results[i] = position;
         }
 
@@ -97,10 +103,6 @@ public class TrajectoryPrediction : MonoBehaviour
     {   
         Collider2D hits = Physics2D.OverlapCircle(position, _collisionCheckRadius); //Measure collision via a small circle at the latest position, dont continue simulating Arc if hit
         
-        if (hits != null) //Return true if something is hit, stopping Arc simulation
-        {   
-            return true;
-        }
-        return false;
+        return hits != null; //Return true if something is hit, stopping Arc simulation
     }
 }
