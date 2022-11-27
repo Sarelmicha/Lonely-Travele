@@ -1,4 +1,4 @@
-namespace HappyFlow.LonelyTraveler.World.Camera
+namespace HappyFlow.LonelyTraveler.Core
 {
     public enum CameraType
     {

@@ -2,7 +2,7 @@ using System;
 using Cinemachine;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.World.Camera
+namespace HappyFlow.LonelyTraveler.Core
 {
     /// <summary>
     /// Define thw functionality of the Camera.

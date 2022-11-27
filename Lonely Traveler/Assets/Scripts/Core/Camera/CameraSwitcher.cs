@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.World.Camera
+namespace HappyFlow.LonelyTraveler.Core
 {
    public class CameraSwitcher : MonoBehaviour
    {

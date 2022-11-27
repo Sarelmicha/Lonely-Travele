@@ -1,3 +1,4 @@
+using HappyFlow.LonelyTraveler.Core;
 using HappyFlow.LonelyTraveler.UI;
 using UnityEngine;
 

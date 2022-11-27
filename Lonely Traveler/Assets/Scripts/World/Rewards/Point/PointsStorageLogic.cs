@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HappyFlow.LonelyTraveler.Rewards.Point
+namespace HappyFlow.LonelyTraveler.World.Rewards
 {
     public class PointsStorageLogic
     {

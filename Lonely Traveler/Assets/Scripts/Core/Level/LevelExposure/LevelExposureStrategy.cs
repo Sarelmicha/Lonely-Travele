@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.World.LevelExposure
+namespace HappyFlow.LonelyTraveler.Core
 {
     /// <summary>
     /// Define the functionally of the <see cref="LevelExposureStrategy"/>

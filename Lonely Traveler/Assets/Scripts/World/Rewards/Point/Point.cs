@@ -1,8 +1,8 @@
 using HappyFlow.LonelyTraveler.Player;
-using HappyFlow.LonelyTraveler.World;
+using HappyFlow.LonelyTraveler.Rewards;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.Rewards.Point
+namespace HappyFlow.LonelyTraveler.World.Rewards
 {
     /// <summary>
     /// This class responsible for handling the point reward (including handling UI and logic).

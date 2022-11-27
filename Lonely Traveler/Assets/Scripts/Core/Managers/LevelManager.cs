@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using HappyFlow.LonelyTraveler.World.Camera;
 using UnityEngine;
-using CameraType = HappyFlow.LonelyTraveler.World.Camera.CameraType;
 
-namespace HappyFlow.LonelyTraveler.World
+namespace HappyFlow.LonelyTraveler.Core
 {
     /// <summary>
     /// This class responsible for managing the level (Start level process, Restart level process)

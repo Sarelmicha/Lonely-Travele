@@ -1,4 +1,5 @@
 using System;
+using HappyFlow.LonelyTraveler.Core;
 using HappyFlow.LonelyTraveler.Player;
 using UnityEngine;
 

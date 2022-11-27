@@ -2,7 +2,7 @@ using System;
 using HappyFlow.LonelyTraveler.Utils;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.World.LevelExposure
+namespace HappyFlow.LonelyTraveler.Core
 {
     /// <summary>
     /// This class responsible for exposing the level to the user with a Linear Line Strategy.

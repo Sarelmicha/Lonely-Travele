@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.World.Terrace
 {
+    /// <summary>
+    /// This class responsible for moving a terrace to a specific target on a certain speed.
+    /// </summary>
     public class MovingTerrace : TriggerAbility
     {
         [SerializeField] private Transform m_Target;

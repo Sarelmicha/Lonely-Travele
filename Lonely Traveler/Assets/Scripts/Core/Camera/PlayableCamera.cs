@@ -1,7 +1,7 @@
 using System;
 
 
-namespace HappyFlow.LonelyTraveler.World.Camera
+namespace HappyFlow.LonelyTraveler.Core
 {
     public class PlayableCamera : CinemachineVirtualCameraBase
     {

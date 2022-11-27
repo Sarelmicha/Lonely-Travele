@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using HappyFlow.LonelyTraveler.World;
+using HappyFlow.LonelyTraveler.Core;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.Rewards.Point
+namespace HappyFlow.LonelyTraveler.World.Rewards
 {
     public class PointsStorage : MonoBehaviour
     {

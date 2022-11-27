@@ -1,8 +1,7 @@
 using System;
-using HappyFlow.LonelyTraveler.World.LevelExposure;
 using UnityEngine;
 
-namespace HappyFlow.LonelyTraveler.World.Camera
+namespace HappyFlow.LonelyTraveler.Core
 {
     public class ExposureCamera : CinemachineVirtualCameraBase
     {
