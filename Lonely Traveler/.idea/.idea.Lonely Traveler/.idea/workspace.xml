@@ -55,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Tests/Runtime/Shared/084-Loops.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/CinemachineCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Models/UnityCharacter/Scripts/CharacterMovement2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Scripts/ActivateCameraWithDistance.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.2/Editor/LookDev/ComparisonGizmoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.2/Runtime/Passes/PostProcessPass.cs" root0="SKIP_HIGHLIGHTING" />
@@ -294,43 +295,17 @@
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/TriggerAbility.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\TriggerAbility.cs" initialLine="47" containingFunctionPresentation="method 'OnTriggerExit2D'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/UI/HUD/Options/RestartButton.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\UI\HUD\Options\RestartButton.cs" initialLine="24" containingFunctionPresentation="method 'OnClick'">
             <startOffsets>
-              <option value="1308" />
+              <option value="613" />
             </startOffsets>
             <endOffsets>
-              <option value="1341" />
+              <option value="652" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World/TriggerAbility.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\TriggerAbility.cs" initialLine="38" containingFunctionPresentation="method 'OnTriggerEnter2D'">
-            <startOffsets>
-              <option value="1081" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1113" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerControllerLogic.cs</url>
-          <line>61</line>
-          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\Player\PlayerControllerLogic.cs" initialLine="61" containingFunctionPresentation="method 'AddForce'">
-            <startOffsets>
-              <option value="2441" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2477" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="89" />
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
