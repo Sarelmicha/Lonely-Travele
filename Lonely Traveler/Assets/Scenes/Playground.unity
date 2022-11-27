@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ClickDuration: 2
-  levelCheckerDisplay: {fileID: 1725535228}
+  m_LevelCheckerDisplay: {fileID: 1725535228}
 --- !u!61 &881010507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4681,6 +4681,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5708880608275835331, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608275835331, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608275835331, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608275835331, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608424529359, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608424529359, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608424529359, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608424529359, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608906492179, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608906492179, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608906492179, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708880608906492179, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5708880609987172668, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
       propertyPath: m_Name
       value: Level Manager
@@ -4737,6 +4785,38 @@ PrefabInstance:
       propertyPath: m_LevelLightManager
       value: 
       objectReference: {fileID: 1043633886}
+    - target: {fileID: 6108331217847145713, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331217847145713, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331217847145713, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331217847145713, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331218914137908, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331218914137908, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331218914137908, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108331218914137908, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4241170ff196127439824c82e5aa77d6, type: 3}
 --- !u!1001 &6335429356340973799
