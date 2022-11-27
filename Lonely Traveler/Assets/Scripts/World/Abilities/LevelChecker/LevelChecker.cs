@@ -9,10 +9,10 @@ namespace HappyFlow.LonelyTraveler.World
     public class LevelChecker : TriggerAbility
     {
         [SerializeField] private float m_ClickDuration = 2;
-        [SerializeField] private LevelCheckerDisplay levelCheckerDisplay;
+        [SerializeField] private LevelCheckerDisplay m_LevelCheckerDisplay;
 
         private bool m_IsClicking = false;
-        float m_TotalDownTime = 0;
+        private float m_TotalDownTime = 0;
 
         private void Update()
         {
@@ -52,12 +52,12 @@ namespace HappyFlow.LonelyTraveler.World
 
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
         {
-            levelCheckerDisplay.Show();
+            m_LevelCheckerDisplay.Show();
         }
 
         protected override void OnPlayerTriggerExit2D(PlayerController playerController)
         {
-            levelCheckerDisplay.Hide();
+            m_LevelCheckerDisplay.Hide();
         }
     } 
 }

@@ -286,10 +286,10 @@
           <line>39</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelChecker.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="1172" />
+              <option value="1174" />
             </startOffsets>
             <endOffsets>
-              <option value="1201" />
+              <option value="1203" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="78" />
