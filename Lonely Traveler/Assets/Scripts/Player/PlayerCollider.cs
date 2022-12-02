@@ -8,7 +8,14 @@ namespace HappyFlow.LonelyTraveler.Player
     /// </summary>
     public class PlayerCollider : MonoBehaviour
     {
+        /// <summary>
+        /// Invoke when the player is grounded.
+        /// </summary>
         public event Action OnPlayerGrounded;
+        
+        /// <summary>
+        /// Invoke when the player is ungrounded.
+        /// </summary>
         public event Action OnPlayerUngrounded;
 
         private const string GROUND = "Ground";
@@ -17,7 +24,6 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             if (col.gameObject.CompareTag(GROUND))
             {
-                Debug.Log("Player grounded.");
                 OnPlayerGrounded?.Invoke();
             }
         }
@@ -26,7 +32,6 @@ namespace HappyFlow.LonelyTraveler.Player
         {
             if (other.gameObject.CompareTag(GROUND))
             {
-                Debug.Log("Player not grounded.");
                 OnPlayerUngrounded?.Invoke();
             }
         }
