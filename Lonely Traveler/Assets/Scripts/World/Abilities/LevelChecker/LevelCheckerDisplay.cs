@@ -14,19 +14,14 @@ namespace HappyFlow.LonelyTraveler.World
         private const string ENTER_CHECKER_ANIMATION = "Enter Checker";
         private const string LEAVE_CHECKER_ANIMATION = "Leave Checker";
 
-        private void Start()
+        private void OnEnable()
         {
             m_LevelChecker.OnPlayerEnterLevelChecker += Show;
             m_LevelChecker.OnPlayerExitLevelChecker += Hide;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
-            if (m_LevelChecker == null)
-            {
-                return;
-            }
-            
             m_LevelChecker.OnPlayerEnterLevelChecker -= Show;
             m_LevelChecker.OnPlayerExitLevelChecker -= Hide;
         }

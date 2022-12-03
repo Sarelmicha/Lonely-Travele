@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Destination: {fileID: 4338813772019776405}
-  m_Speed: 0
+  m_Duration: 4
   m_ShakeBehavior: {fileID: 0}
