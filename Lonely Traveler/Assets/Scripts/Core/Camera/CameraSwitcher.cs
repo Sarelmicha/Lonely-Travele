@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.Core
 {
+   /// <summary>
+   /// This class responsible for switching between cameras during the game.
+   /// </summary>
    public class CameraSwitcher : MonoBehaviour
    {
       [SerializeField] private CinemachineVirtualCameraBase m_ExposureCamera;
