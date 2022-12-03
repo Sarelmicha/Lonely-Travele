@@ -22,6 +22,11 @@ namespace HappyFlow.LonelyTraveler.World
 
         private void OnDestroy()
         {
+            if (m_LevelChecker == null)
+            {
+                return;
+            }
+            
             m_LevelChecker.OnPlayerEnterLevelChecker -= Show;
             m_LevelChecker.OnPlayerExitLevelChecker -= Hide;
         }

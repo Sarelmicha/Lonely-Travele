@@ -75,14 +75,14 @@ public class TrajectoryPrediction : MonoBehaviour
         Vector2 moveStep = velocity * timeStep;
         Vector2 position = m_Target.transform.position;
 
-        for (int i = 0; i < steps; i++)
+        for (var i = 0; i < steps; i++)
         {
             moveStep = CalculateStep(moveStep, gravityAccel, drag, ref position);
 
-            if (CheckForCollision(moveStep))
-            {
-                break;
-            }
+            // if (CheckForCollision(moveStep))
+            // {
+            //     break;
+            // }
 
             results[i] = position;
         }
