@@ -71,7 +71,6 @@ namespace HappyFlow.LonelyTraveler.Core
          }
 
          m_Cameras.Add(camera);
-         Debug.Log($"Camera registered = {camera} ");
       }
 
       private void Unregister(CinemachineVirtualCameraBase camera)
@@ -83,7 +82,6 @@ namespace HappyFlow.LonelyTraveler.Core
          }
 
          m_Cameras.Remove(camera);
-         Debug.Log($"Camera unregister = {camera} ");
       }
       
       public void Reset(bool shouldFullReset)
