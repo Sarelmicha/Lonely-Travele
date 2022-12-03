@@ -11,9 +11,9 @@ namespace HappyFlow.LonelyTraveler.Core
     /// </summary>
     public class LinearLineStrategy : LevelExposureStrategy
     {
-        [SerializeField] private Transform m_Target;
-        [SerializeField] private float m_ToTargetDuration;
-        [SerializeField] private float m_FromTargetDuration;
+        [SerializeField] private Transform m_Destination;
+        [SerializeField] private float m_ToDestinationDuration;
+        [SerializeField] private float m_FromDestinationDuration;
         private Vector3 m_InitialPosition;
         private IMovementTweener m_MovementTweener;
         private LevelManager m_LevelManager;
@@ -29,9 +29,9 @@ namespace HappyFlow.LonelyTraveler.Core
         /// </summary>
         public override void Expose(Action onComplete = null)
         {
-            m_MovementTweener.MoveTo(transform, m_Target.position, m_ToTargetDuration, new MovementSwing(10, 1), () =>
+            m_MovementTweener.MoveTo(transform, m_Destination.position, m_ToDestinationDuration, new MovementSwing(10, 1), () =>
             {
-                m_MovementTweener.MoveTo(transform, m_InitialPosition, m_FromTargetDuration, null, () =>
+                m_MovementTweener.MoveTo(transform, m_InitialPosition, m_FromDestinationDuration, null, () =>
                 {
                     onComplete?.Invoke();
                 });

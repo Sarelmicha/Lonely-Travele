@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace HappyFlow.LonelyTraveler.World
@@ -8,14 +9,27 @@ namespace HappyFlow.LonelyTraveler.World
     public class LevelCheckerDisplay : MonoBehaviour
     {
         [SerializeField] private Animator m_CheckerAnimation;
+        [SerializeField] private LevelChecker m_LevelChecker;
 
         private const string ENTER_CHECKER_ANIMATION = "Enter Checker";
         private const string LEAVE_CHECKER_ANIMATION = "Leave Checker";
 
+        private void Start()
+        {
+            m_LevelChecker.OnPlayerEnterLevelChecker += Show;
+            m_LevelChecker.OnPlayerExitLevelChecker += Hide;
+        }
+
+        private void OnDestroy()
+        {
+            m_LevelChecker.OnPlayerEnterLevelChecker -= Show;
+            m_LevelChecker.OnPlayerExitLevelChecker -= Hide;
+        }
+
         /// <summary>
         /// Show an indication to the user that the level player enter the checker
         /// </summary>
-        public void Show()
+        private void Show()
         {
             m_CheckerAnimation.Play(ENTER_CHECKER_ANIMATION);
         }
@@ -23,7 +37,7 @@ namespace HappyFlow.LonelyTraveler.World
         /// <summary>
         /// Show an indication to the user that the level player left the checker
         /// </summary>
-        public void Hide()
+        private void Hide()
         {
             m_CheckerAnimation.Play(LEAVE_CHECKER_ANIMATION);
         }

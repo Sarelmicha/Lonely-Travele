@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fba39d4854bde9489c918e037d087f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaximumLightLevel: 0.8
+  m_MaximumLightLevel: 1
   m_MinimumLightLevel: 0
-  m_LightReducerRate: 0.015
-  m_LightIncreaserRate: 0.015
+  m_LightReducerRate: 0.5
+  m_LightIncreaserRate: 0.5
   m_LevelGlobalLight: {fileID: 6979545097995357269}
 --- !u!1001 &2182940080090055769
 PrefabInstance:

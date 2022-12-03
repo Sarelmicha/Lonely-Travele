@@ -39,6 +39,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/TriggerAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/BoneDrawingUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SkinningModule/OutlineGenerator/OutlineGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.2/Editor/SpriteLib/SpriteLibraryInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Editor/BurstDisassembler.Core.ARM64.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.0/Tests/Runtime/Shared/031-Pointers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -234,39 +235,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/LevelChecker/LevelCheckerDisplay.cs</url>
-          <line>16</line>
+          <line>30</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelCheckerDisplay.cs" initialLine="13" containingFunctionPresentation="method 'Show'">
             <startOffsets>
-              <option value="507" />
+              <option value="933" />
             </startOffsets>
             <endOffsets>
-              <option value="556" />
+              <option value="982" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/LevelChecker/LevelCheckerDisplay.cs</url>
-          <line>24</line>
+          <line>38</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelCheckerDisplay.cs" initialLine="18" containingFunctionPresentation="method 'Hide'">
             <startOffsets>
-              <option value="744" />
+              <option value="1171" />
             </startOffsets>
             <endOffsets>
-              <option value="793" />
+              <option value="1220" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/LevelChecker/LevelChecker.cs</url>
-          <line>39</line>
+          <line>42</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelChecker.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="1182" />
+              <option value="1238" />
             </startOffsets>
             <endOffsets>
-              <option value="1211" />
+              <option value="1267" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="78" />
@@ -276,13 +277,39 @@
           <line>33</line>
           <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\UI\HUD\Options\RestartButton.cs" initialLine="24" containingFunctionPresentation="method 'OnClick'">
             <startOffsets>
-              <option value="996" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="996" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/LevelChecker/LevelChecker.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelChecker.cs" initialLine="62" containingFunctionPresentation="method 'OnPlayerTriggerExit2D'">
+            <startOffsets>
+              <option value="1877" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1912" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/World/Abilities/LevelChecker/LevelChecker.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\sarel\Unity\Repositories\Lonely Traveler\Lonely Traveler\Assets\Scripts\World\Abilities\LevelChecker\LevelChecker.cs" initialLine="57" containingFunctionPresentation="method 'OnPlayerTriggerEnter2D'">
+            <startOffsets>
+              <option value="1718" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1754" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

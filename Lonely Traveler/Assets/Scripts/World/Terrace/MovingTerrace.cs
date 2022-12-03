@@ -9,8 +9,8 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
     /// </summary>
     public class MovingTerrace : TriggerAbility
     {
-        [SerializeField] private Transform m_Target;
-        [SerializeField] private float m_Speed;
+        [SerializeField] private Transform m_Destination;
+        [SerializeField] private float m_Duration;
         [SerializeField] private ShakeBehavior m_ShakeBehavior;
         private IMovementTweener m_MovementTweener;
         private Vector3 m_InitialPosition;
@@ -31,17 +31,17 @@ namespace HappyFlow.LonelyTraveler.World.Terrace
             }
 
             m_IsMoving = true;
-            m_MovementTweener.MoveTo(transform, m_Target.position, m_Speed, null, OnTargetReached);
+            m_MovementTweener.MoveTo(transform, m_Destination.position, m_Duration, null, OnReachedDestination);
         }
 
-        private void OnTargetReached()
+        private void OnReachedDestination()
         {
-            m_ShakeBehavior.Shake();
+            m_ShakeBehavior?.Shake();
         }
 
         private bool IsReachedTarget()
         {
-            return Vector2.Distance(transform.position, m_Target.position) < m_Speed * Time.deltaTime;
+            return Vector2.Distance(transform.position, m_Destination.position) < m_Duration * Time.deltaTime;
         }
 
         protected override void OnPlayerTriggerEnter2D(PlayerController playerController)
